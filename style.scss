@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css?family=Poiret+One");
+
+$font-alt: "Poiret One", cursive;
+
+$clr-hf: #373737;
+$clr-bg: #f4f4f4;
+$clr-gold: #c0b283;
+$clr-shd: #707070;
+$clr-white: #ffff;
+
+* {
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: $clr-bg;
+  font-family: $font-alt;
+}
+header,
+footer {
+  display: flex;
+  align-items: center;
+  background-color: $clr-hf;
+  color: $clr-white;
+  width: 100%;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 3px 20px $clr-shd;
+}
+.banner {
+  width: 100%;
+  position: sticky;
+  top: 7%;
+  z-index: -10;
+}
+#main-index {
+  color: $clr-hf;
+  background-color: $clr-bg;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .pagaende-img {
+    margin: auto;
+    display: block;
+  }
+  p {
+    text-align: center;
+    margin: 0;
+  }
+
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  header,
+  footer {
+    padding: 0.5% 4%;
+  }
+  header {
+    #art-logo {
+      width: 6%;
+    }
+    h1 {
+      font-size: 1.7em;
+      margin-left: 2%;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-right: auto;
+    }
+    ul {
+      width: 40%;
+      padding: 0;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      li {
+        a {
+          text-decoration: none;
+          font-size: 14px;
+          color: $clr-white;
+        }
+        a:hover {
+          color: $clr-gold;
+        }
+        .active {
+          text-decoration: underline;
+        }
+      }
+    }
+    input {
+      width: 12%;
+      margin-left: auto;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-right: 0;
+    }
+  }
+  #main-index {
+    padding: 30px 0;
+    .pagaende-img {
+      width: 30%;
+      margin-top: 20px;
+      box-shadow: 0 1px 10px $clr-shd;
+    }
+    #artist-namn1 {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  }
+  footer {
+    margin-top: 30px;
+    height: 80px;
+    #social-media {
+      margin-left: auto;
+      .social-media-logo {
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+      }
+    }
+  }
+}
