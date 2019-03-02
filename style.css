@@ -49,9 +49,8 @@ main {
 }
 
 main hr {
-  border: 0.4px solid #dbdbdb;
   width: 70%;
-  margin: 30px 0;
+  margin: 2% 0;
 }
 
 #main-index {
@@ -67,7 +66,7 @@ main hr {
           align-items: center;
 }
 
-#main-index .pagaende-img {
+#main-index img {
   margin: auto;
   display: block;
 }
@@ -119,6 +118,20 @@ main hr {
   background-color: #ffff;
 }
 
+#main-utställningar .white-box div {
+  text-align: justify;
+}
+
+#main-utställningar .white-box div h3 {
+  text-align: center;
+  margin: 0;
+}
+
+#main-utställningar .white-box div h4 {
+  text-align: center;
+  margin: 0;
+}
+
 @media (min-width: 768px) {
   header,
   footer {
@@ -164,21 +177,18 @@ main hr {
     margin-bottom: 0;
     margin-right: 0;
   }
-  #main-index {
-    padding: 30px 0;
+  main {
+    padding: 2.5% 0;
   }
-  #main-index .pagaende-img {
+  #main-index img {
     width: 30%;
-    margin-top: 20px;
+    margin-top: 2.5%;
     -webkit-box-shadow: 0 1px 10px #707070;
             box-shadow: 0 1px 10px #707070;
   }
-  #main-index #artist-namn1 {
+  #main-index #artist-namn {
     font-size: 20px;
     margin-top: 10px;
-  }
-  #main-utställningar {
-    padding: 30px 0;
   }
   #main-utställningar .white-box {
     width: 70%;
@@ -205,15 +215,122 @@ main hr {
   }
   #main-utställningar .white-box div {
     width: 40%;
-    text-align: justify;
   }
-  #main-utställningar .white-box div h3 {
-    text-align: center;
-    margin: 0;
+  #main-kontakt {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "rubrik rubrik" "line line" "adress formular" "linje formular" "karta formular";
   }
-  #main-utställningar .white-box div h4 {
+  #main-kontakt .rubrik {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: rubrik;
     text-align: center;
+  }
+  #main-kontakt .line {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: line;
+    width: 100%;
+    margin: 3% 0 4% 0;
+  }
+  #main-kontakt .adress {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: adress;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  #main-kontakt .adress .p-rubrik {
+    font-size: 1.5em;
     margin: 0;
+    padding: 0;
+  }
+  #main-kontakt .adress .p-adress {
+    line-height: 2.5em;
+  }
+  #main-kontakt .line-two {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: linje;
+    width: 90%;
+    margin: 4% 0 8% 0;
+  }
+  #main-kontakt .karta {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: karta;
+    height: 300px;
+  }
+  #main-kontakt .karta iframe {
+    width: 90%;
+    height: 100%;
+    border: 1px solid #dbdbdb;
+  }
+  #main-kontakt .formular {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 2;
+    grid-area: formular;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  #main-kontakt .formular .p-rubrik {
+    font-size: 1.5em;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-left: 10%;
+    margin-top: 0;
+  }
+  #main-kontakt .formular input {
+    border: 0;
+    width: 90%;
+    height: 7%;
+    margin-top: 1.5%;
+    margin-bottom: 5%;
+  }
+  #main-kontakt .formular label {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-left: 10%;
+  }
+  #main-kontakt .formular #meddelande {
+    height: 30%;
+  }
+  #main-kontakt .formular a {
+    width: 15%;
+    background-color: #c0b283;
+    padding: 1.5%;
+    text-align: center;
+    text-decoration: none;
+    color: #373737;
+    border-radius: 2.5px;
   }
   footer {
     margin-top: 30px;

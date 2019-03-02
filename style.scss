@@ -49,9 +49,9 @@ main {
   background-color: $clr-bg;
   width: 100%;
   hr {
-    border: 0.4px solid $clr-gray;
+    // border: 0.5px solid $clr-gray;
     width: 70%;
-    margin: 30px 0;
+    margin: 2% 0;
   }
 }
 #main-index {
@@ -59,7 +59,7 @@ main {
   flex-direction: column;
   align-items: center;
 
-  .pagaende-img {
+  img {
     margin: auto;
     display: block;
   }
@@ -88,8 +88,17 @@ main {
   align-items: center;
   .white-box {
     background-color: $clr-white;
-    // .pagaende-img {
-    // }
+    div {
+      text-align: justify;
+      h3 {
+        text-align: center;
+        margin: 0;
+      }
+      h4 {
+        text-align: center;
+        margin: 0;
+      }
+    }
   }
 }
 
@@ -143,20 +152,22 @@ main {
 
   // main
 
+  main {
+    padding: 2.5% 0;
+  }
+
   #main-index {
-    padding: 30px 0;
-    .pagaende-img {
+    img {
       width: 30%;
-      margin-top: 20px;
+      margin-top: 2.5%;
       box-shadow: 0 1px 10px $clr-shd;
     }
-    #artist-namn1 {
+    #artist-namn {
       font-size: 20px;
       margin-top: 10px;
     }
   }
   #main-utställningar {
-    padding: 30px 0;
     .white-box {
       width: 70%;
       height: 100%;
@@ -173,15 +184,95 @@ main {
       }
       div {
         width: 40%;
-        text-align: justify;
-        h3{
-            text-align: center;
-            margin: 0;
-        }
-        h4{
-            text-align: center;
-            margin: 0;
-        }
+      }
+    }
+  }
+
+  #main-kontakt {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "rubrik rubrik"
+      "line line"
+      "adress formular"
+      "linje formular"
+      "karta formular";
+    .rubrik {
+      grid-area: rubrik;
+      text-align: center;
+    }
+    .line {
+      grid-area: line;
+      width: 100%;
+      margin: 3% 0 4% 0;
+    }
+    .adress {
+      grid-area: adress;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; 
+      
+      .p-rubrik {
+        font-size: 1.5em;
+        margin: 0;
+        padding: 0;
+      }
+      .p-adress {
+        line-height: 2.5em;
+      }
+    }
+    .line-two {
+      grid-area: linje;
+      width: 90%;
+      margin: 4% 0 8% 0;
+    }
+    .karta {
+      grid-area: karta;
+      height: 300px;
+      iframe {
+        width: 90%;
+        height: 100%;
+        border: 1px solid $clr-gray;
+      }
+    }
+    .formular {
+      grid-area: formular;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      .p-rubrik {
+        font-size: 1.5em;
+        align-self: flex-start;
+        margin-left: 10%;
+        margin-top: 0;
+      }
+      input {
+        border: 0;
+        width: 90%;
+        height: 7%;
+        margin-top: 1.5%;
+        margin-bottom: 5%;
+      }
+      label {
+        align-self: flex-start;
+        margin-left: 10%;
+      }
+      #meddelande{
+          height: 30%;
+      }
+      a{
+          width: 15%;
+          background-color: $clr-gold;
+          padding: 1.5%;
+          text-align: center;
+          text-decoration: none;
+          color: $clr-hf;
+          border-radius: 2.5px;
       }
     }
   }
