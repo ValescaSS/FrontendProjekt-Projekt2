@@ -1,4 +1,5 @@
-// slideshow script
+
+// automatisk slideshow - index sida
 
 let slideIndex = 0;
 
@@ -19,3 +20,7 @@ function showSlides() {
   setTimeout(showSlides, 2500);
 }
 showSlides();
+
+// slideshow scrip - pagaende sida
+
+// overlay - pagaende sida

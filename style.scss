@@ -6,6 +6,7 @@ $clr-hf: #373737;
 $clr-bg: #f4f4f4;
 $clr-gold: #c0b283;
 $clr-shd: #707070;
+$clr-shd-i: #928d8d;
 $clr-white: #ffff;
 $clr-gray: rgb(219, 219, 219);
 
@@ -33,12 +34,12 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
-  box-shadow: 0 3px 20px $clr-shd;
+  box-shadow: 0px 5px 16px 0px $clr-shd;
 }
 .banner {
   width: 100%;
   position: sticky;
-  top: 7%;
+  top: 65px;
   z-index: -10;
 }
 
@@ -58,6 +59,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 0 16px $clr-shd-i;
 
   img {
     margin: auto;
@@ -82,7 +84,7 @@ main {
   }
 }
 
-#main-utställningar {
+#main-pagaende {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,6 +103,45 @@ main {
     }
   }
 }
+
+#main-kommande {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      box-shadow: 0px 8px 16px 0px $clr-shd;
+    }
+    h2 {
+      margin: 0;
+    }
+    p {
+      margin: 0;
+    }
+  }
+}
+
+#main-tidigare {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  section {
+    img {
+      width: 100%;
+      box-shadow: 0px 8px 16px 0px $clr-shd;
+    }
+    p {
+      text-align: center;
+      background-color: $clr-white;
+    }
+  }
+}
+
+// desktop layout
 
 @media (min-width: 768px) {
   // header
@@ -140,6 +181,24 @@ main {
           text-decoration: underline;
         }
       }
+      .dropdown-content {
+        background-color: $clr-shd;
+        background: rgba(7, 7, 7, 0.5);
+        display: none;
+        position: absolute;
+        a {
+          display: block;
+          margin: 5px;
+          padding: 5px;
+          text-align: center;
+          color: $clr-white;
+        }
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+        width: auto;
+        margin: 0 auto;
+      }
     }
     input {
       width: 12%;
@@ -153,21 +212,21 @@ main {
   // main
 
   main {
-    padding: 2.5% 0;
+    padding: 2.5% 0 5% 0;
   }
-
   #main-index {
+    box-shadow: 0px -2px 16px 0px $clr-shd;
     img {
       width: 30%;
       margin-top: 2.5%;
-      box-shadow: 0 1px 10px $clr-shd;
+      box-shadow: 0px 8px 16px 0px $clr-shd;
     }
     #artist-namn {
       font-size: 20px;
       margin-top: 10px;
     }
   }
-  #main-utställningar {
+  #main-pagaende {
     .white-box {
       width: 70%;
       height: 100%;
@@ -180,14 +239,26 @@ main {
         width: 25%;
         height: 100%;
         margin: 5% 0;
-        box-shadow: 0 1px 10px $clr-shd;
+        box-shadow: 0px 8px 16px 0px $clr-shd;
       }
       div {
         width: 40%;
       }
     }
   }
-
+  #main-kommande {
+    div {
+      width: 50%;
+      margin: 30px;
+      img {
+        width: 100%;
+        margin: 10px;
+      }
+      #jg-bild {
+        width: 60%;
+      }
+    }
+  }
   #main-kontakt {
     width: 70%;
     margin-left: auto;
@@ -215,8 +286,8 @@ main {
       grid-area: adress;
       display: flex;
       flex-direction: column;
-      align-items: flex-start; 
-      
+      align-items: flex-start;
+
       .p-rubrik {
         font-size: 1.5em;
         margin: 0;
@@ -262,17 +333,33 @@ main {
         align-self: flex-start;
         margin-left: 10%;
       }
-      #meddelande{
-          height: 30%;
+      #meddelande {
+        height: 30%;
       }
-      a{
-          width: 15%;
-          background-color: $clr-gold;
-          padding: 1.5%;
-          text-align: center;
-          text-decoration: none;
-          color: $clr-hf;
-          border-radius: 2.5px;
+      a {
+        width: 15%;
+        background-color: $clr-gold;
+        padding: 1.5%;
+        text-align: center;
+        text-decoration: none;
+        color: $clr-hf;
+        border-radius: 2.5px;
+      }
+    }
+  }
+  #main-tidigare {
+    section {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 2%;
+      width: 70%;
+      img {
+        width: 100%;
+      }
+      p {
+        margin: 0;
+        padding: 10px;
+        margin-bottom: 20px;
       }
     }
   }
@@ -280,7 +367,6 @@ main {
   // footer
 
   footer {
-    margin-top: 30px;
     height: 80px;
     #social-media {
       margin-left: auto;
