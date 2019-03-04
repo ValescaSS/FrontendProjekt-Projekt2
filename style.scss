@@ -9,6 +9,7 @@ $clr-shd: #707070;
 $clr-shd-i: #928d8d;
 $clr-white: #ffff;
 $clr-gray: rgb(219, 219, 219);
+$clr-silk: #dcd0c0;
 
 * {
   box-sizing: border-box;
@@ -90,6 +91,9 @@ main {
   align-items: center;
   .white-box {
     background-color: $clr-white;
+    img {
+      cursor: pointer;
+    }
     div {
       text-align: justify;
       h3 {
@@ -139,6 +143,78 @@ main {
       background-color: $clr-white;
     }
   }
+}
+
+// overlay och slideshow pagaende sida
+
+#overlay1,
+#overlay2,
+#overlay3 {
+  position: fixed;
+  display: none;
+  width: 60%;
+  height: 80%;
+  top: 15%;
+  left: 20%;
+  background-color: rgba(55, 55, 55, 0.9);
+  // z-index: 10;
+}
+.overlay-bild {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  #pawel,
+  #hudson,
+  #fabian,
+  #amine,
+  #aman,
+  #fabian,
+  #daniele {
+    width: 45%;
+  }
+  #gustavo,
+  #andrey,
+  #diana,
+  #mihai {
+    width: 70%;
+  }
+  #robert {
+    width: 60%;
+  }
+}
+#button1,
+#button2,
+#button3 {
+  cursor: pointer;
+}
+
+// slideshow pagaende sida
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: $clr-white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 // desktop layout
@@ -198,6 +274,7 @@ main {
         display: block;
         width: auto;
         margin: 0 auto;
+        z-index: 15;
       }
     }
     input {

@@ -8,6 +8,7 @@
     <title>Utställningar</title>
   </head>
   <body>
+    <script src="js/script.js"></script>
     <header>
       <img src="images/logo.jpg" alt="Art logo" id="art-logo" />
       <h1>LIVE ART GALLERY</h1>
@@ -37,7 +38,9 @@
         <img
           src="images/pawel-czerwinski-767667-unsplash.jpg"
           alt="Pawel Czerwinski bild"
+          onclick="onOne()"
         />
+
         <div>
           <h3>Pawel Czerwinski - Lorem Ipsum</h3>
           <h4>Från 1 april February till 20 juni 2019</h4>
@@ -60,6 +63,7 @@
           src="images/hudson-hintze-268381-unsplash.jpg"
           alt="Pawel Czerwinski bild"
           class="pagaende-img"
+          onclick="onTwo()"
         />
         <div>
           <h3>Hudson Hintze - Lorem Ipsum</h3>
@@ -84,6 +88,7 @@
           src="images/fabian-bachli-1313181-unsplash.jpg"
           alt="Pawel Czerwinski bild"
           class="pagaende-img"
+          onclick="onThree()"
         />
         <div>
           <h3>Fabian Bachli - Lorem Ipsum</h3>
@@ -105,6 +110,110 @@
       </div>
     </main>
 
+    <!-- overlay och slideshow -->
+
+    <div id="overlay1">
+      <div class="overlay-bild mySlides1">
+        <img
+          id="pawel"
+          src="images/pawel-czerwinski-767667-unsplash.jpg"
+          alt="Pawel Czerwinski"
+        />
+      </div>
+      <div class="overlay-bild mySlides1">
+        <img
+          id="amine"
+          src="images/amine-goma-1201858-unsplash.jpg"
+          alt="Amine Goma"
+        />
+      </div>
+      <div class="overlay-bild mySlides1">
+        <img
+          id="aman"
+          src="images/aman-ravi-92428-unsplash.jpg"
+          alt="Aman Ravi"
+        />
+      </div>
+      <div class="overlay-bild mySlides1">
+        <img
+          id="gustavo"
+          src="images/gustavo-centurion-665623-unsplash.jpg"
+          alt="Gustavo Centurion"
+        />
+      </div>
+      <a class="prev" onclick="plusSlides1(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides1(1)">&#10095;</a>
+      <a id="button1" onclick="offOne()">X</a>
+    </div>
+
+    <!--  -->
+
+    <div id="overlay2">
+      <div class="overlay-bild mySlides2">
+        <img
+          id="hudson"
+          src="images/hudson-hintze-268381-unsplash.jpg"
+          alt="Hudson Hintze"
+        />
+      </div>
+      <div class="overlay-bild mySlides2">
+        <img
+          id="andrey"
+          src="images/andrey-zvyagintsev-1171061-unsplash.jpg"
+          alt="Andrey Zvyagintsev"
+        />
+      </div>
+      <div class="overlay-bild mySlides2">
+        <img
+          id="diana"
+          src="images/diana-aishe-1251600-unsplash.jpg"
+          alt="Diana Aishe"
+        />
+      </div>
+      <div class="overlay-bild mySlides2">
+        <img
+          id="robert"
+          src="images/robert-collins-362599-unsplash.jpg"
+          alt="Robert Collins"
+        />
+      </div>
+      <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides2(1)">&#10095;</a>
+      <a id="button2" onclick="offTwo()">X</a>
+
+    </div>
+
+    <!--  -->
+
+    <div id="overlay3">
+      <div class="overlay-bild mySlides3">
+        <img
+          id="fabian"
+          src="images/fabian-bachli-1313181-unsplash.jpg"
+          alt="Fabian Bachli"
+        />
+      </div>
+      <div class="overlay-bild mySlides3">
+        <img
+          id="daniele"
+          src="images/daniele-d-andreti-1313166-unsplash.jpg"
+          alt="Daniele D-Andreti"
+        />
+      </div>
+      <div class="overlay-bild mySlides3">
+        <img
+          id="mihai"
+          src="images/mihai-surdu-618936-unsplash.jpg"
+          alt="Mihai Surdu"
+        />
+      </div>
+      <a class="prev" onclick="plusSlides3(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides3(1)">&#10095;</a>
+      <a id="button3" onclick="offThree()">X</a>
+    </div>
+
+    <!--  -->
+
     <footer>
       <p>Copyright 2019 - Valesca Sarrocchi</p>
       <div id="social-media">
@@ -125,5 +234,9 @@
         />
       </div>
     </footer>
+    <script src="js/script.js"></script>
+    <script src="js/script1.js"></script>
+    <script src="js/script2.js"></script>
+    <script src="js/script3.js"></script>
   </body>
 </html>

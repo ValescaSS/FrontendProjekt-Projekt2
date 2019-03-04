@@ -119,6 +119,10 @@ main hr {
   background-color: #ffff;
 }
 
+#main-pagaende .white-box img {
+  cursor: pointer;
+}
+
 #main-pagaende .white-box div {
   text-align: justify;
 }
@@ -196,6 +200,88 @@ main hr {
   background-color: #ffff;
 }
 
+#overlay1,
+#overlay2,
+#overlay3 {
+  position: fixed;
+  display: none;
+  width: 60%;
+  height: 80%;
+  top: 15%;
+  left: 20%;
+  background-color: rgba(55, 55, 55, 0.9);
+}
+
+.overlay-bild {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overlay-bild #pawel,
+.overlay-bild #hudson,
+.overlay-bild #fabian,
+.overlay-bild #amine,
+.overlay-bild #aman,
+.overlay-bild #fabian,
+.overlay-bild #daniele {
+  width: 45%;
+}
+
+.overlay-bild #gustavo,
+.overlay-bild #andrey,
+.overlay-bild #diana,
+.overlay-bild #mihai {
+  width: 70%;
+}
+
+.overlay-bild #robert {
+  width: 60%;
+}
+
+#button1,
+#button2,
+#button3 {
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #ffff;
+  font-weight: bold;
+  font-size: 18px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 @media (min-width: 768px) {
   header,
   footer {
@@ -251,6 +337,7 @@ main hr {
     display: block;
     width: auto;
     margin: 0 auto;
+    z-index: 15;
   }
   header input {
     width: 12%;
