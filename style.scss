@@ -61,14 +61,18 @@ main {
   flex-direction: column;
   align-items: center;
   box-shadow: 0 0 16px $clr-shd-i;
+  div {
+    a {
+      img {
+        margin: auto;
+        display: block;
+      }
+    }
 
-  img {
-    margin: auto;
-    display: block;
-  }
-  p {
-    text-align: center;
-    margin: 0;
+    p {
+      text-align: center;
+      margin: 0;
+    }
   }
 
   .fade {
@@ -147,9 +151,7 @@ main {
 
 // overlay och slideshow pagaende sida
 
-#overlay1,
-#overlay2,
-#overlay3 {
+.overlay {
   position: fixed;
   display: none;
   width: 60%;
@@ -158,6 +160,18 @@ main {
   left: 20%;
   background-color: rgba(55, 55, 55, 0.9);
   // z-index: 10;
+  .button {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    top: -100%;
+    a {
+      cursor: pointer;
+      color: $clr-white;
+      margin: 10px;
+      padding: 5px;
+    }
+  }
 }
 .overlay-bild {
   height: 100%;
@@ -182,11 +196,6 @@ main {
   #robert {
     width: 60%;
   }
-}
-#button1,
-#button2,
-#button3 {
-  cursor: pointer;
 }
 
 // slideshow pagaende sida
@@ -293,14 +302,19 @@ main {
   }
   #main-index {
     box-shadow: 0px -2px 16px 0px $clr-shd;
-    img {
+    div {
       width: 30%;
-      margin-top: 2.5%;
-      box-shadow: 0px 8px 16px 0px $clr-shd;
-    }
-    #artist-namn {
-      font-size: 20px;
-      margin-top: 10px;
+      a {
+        img {
+          width: 80%;
+          margin-top: 2.5%;
+          box-shadow: 0px 8px 16px 0px $clr-shd;
+        }
+      }
+      #artist-namn {
+        font-size: 20px;
+        margin-top: 10px;
+      }
     }
   }
   #main-pagaende {

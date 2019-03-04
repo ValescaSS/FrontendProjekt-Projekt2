@@ -2,7 +2,7 @@
 
 let slideIndex = 0;
 
-function showSlides() {
+function showSlidesAuto() {
   let slides = document.getElementsByClassName("mySlides");
 
   for (let i = 0; i < slides.length; i++) {
@@ -16,32 +16,15 @@ function showSlides() {
   }
 
   slides[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides, 2500);
+  setTimeout(showSlidesAuto, 2500);
 }
-showSlides();
-
-// slideshow scrip - pagaende sida
-
+showSlidesAuto();
 
 // overlay - pagaende sida
 
-function onOne() {
-  document.getElementById("overlay1").style.display = "block";
+function on(x) {
+  document.getElementById(x).style.display = "block";
 }
-function offOne() {
-  document.getElementById("overlay1").style.display = "none";
-}
-
-function onTwo() {
-  document.getElementById("overlay2").style.display = "block";
-}
-function offTwo() {
-  document.getElementById("overlay2").style.display = "none";
-}
-
-function onThree() {
-  document.getElementById("overlay3").style.display = "block";
-}
-function offThree() {
-  document.getElementById("overlay3").style.display = "none";
+function off(y) {
+  document.getElementById(y).style.display = "none";
 }

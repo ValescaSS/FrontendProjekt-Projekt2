@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
-    <title>Utställningar</title>
+    <title>Pågående</title>
   </head>
   <body>
     <script src="js/script.js"></script>
@@ -30,15 +30,16 @@
     </header>
 
     <main id="main-pagaende" class="main">
-      <h2>PÅGÅENDE UTSTÄLLNINGAR</h2>
+      <span id="pawelczerwinski"></span>
 
+      <h2>PÅGÅENDE UTSTÄLLNINGAR</h2>
       <hr />
 
       <div class="white-box">
         <img
           src="images/pawel-czerwinski-767667-unsplash.jpg"
           alt="Pawel Czerwinski bild"
-          onclick="onOne()"
+          onclick="on('overlay1')"
         />
 
         <div>
@@ -58,12 +59,17 @@
           </p>
         </div>
       </div>
+
+      <div>
+        <span id="hudsonhintze"></span>
+      </div>
+
       <div class="white-box">
         <img
           src="images/hudson-hintze-268381-unsplash.jpg"
           alt="Pawel Czerwinski bild"
           class="pagaende-img"
-          onclick="onTwo()"
+          onclick="on('overlay2')"
         />
         <div>
           <h3>Hudson Hintze - Lorem Ipsum</h3>
@@ -83,12 +89,17 @@
           </p>
         </div>
       </div>
+
+      <div>
+        <span id="fabianbachli"></span>
+      </div>
+
       <div class="white-box">
         <img
           src="images/fabian-bachli-1313181-unsplash.jpg"
           alt="Pawel Czerwinski bild"
           class="pagaende-img"
-          onclick="onThree()"
+          onclick="on('overlay3')"
         />
         <div>
           <h3>Fabian Bachli - Lorem Ipsum</h3>
@@ -112,7 +123,7 @@
 
     <!-- overlay och slideshow -->
 
-    <div id="overlay1">
+    <div class="overlay" id="overlay1">
       <div class="overlay-bild mySlides1">
         <img
           id="pawel"
@@ -141,14 +152,16 @@
           alt="Gustavo Centurion"
         />
       </div>
-      <a class="prev" onclick="plusSlides1(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides1(1)">&#10095;</a>
-      <a id="button1" onclick="offOne()">X</a>
+      <a class="prev" onclick="plusSlides(-1, 'mySlides1')">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, 'mySlides1')">&#10095;</a>
+      <div class="button">
+        <a onclick="off('overlay1')">X</a>
+      </div>
     </div>
 
     <!--  -->
 
-    <div id="overlay2">
+    <div class="overlay" id="overlay2">
       <div class="overlay-bild mySlides2">
         <img
           id="hudson"
@@ -177,15 +190,16 @@
           alt="Robert Collins"
         />
       </div>
-      <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides2(1)">&#10095;</a>
-      <a id="button2" onclick="offTwo()">X</a>
-
+      <a class="prev" onclick="plusSlides(-1, 'mySlides2')">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, 'mySlides2')">&#10095;</a>
+      <div class="button">
+        <a onclick="off('overlay2')">X</a>
+      </div>
     </div>
 
     <!--  -->
 
-    <div id="overlay3">
+    <div class="overlay" id="overlay3">
       <div class="overlay-bild mySlides3">
         <img
           id="fabian"
@@ -207,9 +221,11 @@
           alt="Mihai Surdu"
         />
       </div>
-      <a class="prev" onclick="plusSlides3(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides3(1)">&#10095;</a>
-      <a id="button3" onclick="offThree()">X</a>
+      <a class="prev" onclick="plusSlides(-1, 'mySlides3')">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, 'mySlides3')">&#10095;</a>
+      <div class="button">
+        <a onclick="off('overlay3')">X</a>
+      </div>
     </div>
 
     <!--  -->
@@ -234,9 +250,8 @@
         />
       </div>
     </footer>
+
     <script src="js/script.js"></script>
     <script src="js/script1.js"></script>
-    <script src="js/script2.js"></script>
-    <script src="js/script3.js"></script>
   </body>
 </html>

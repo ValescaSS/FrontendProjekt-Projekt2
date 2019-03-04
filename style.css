@@ -67,12 +67,12 @@ main hr {
           box-shadow: 0 0 16px #928d8d;
 }
 
-#main-index img {
+#main-index div a img {
   margin: auto;
   display: block;
 }
 
-#main-index p {
+#main-index div p {
   text-align: center;
   margin: 0;
 }
@@ -200,9 +200,7 @@ main hr {
   background-color: #ffff;
 }
 
-#overlay1,
-#overlay2,
-#overlay3 {
+.overlay {
   position: fixed;
   display: none;
   width: 60%;
@@ -210,6 +208,24 @@ main hr {
   top: 15%;
   left: 20%;
   background-color: rgba(55, 55, 55, 0.9);
+}
+
+.overlay .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+  top: -100%;
+}
+
+.overlay .button a {
+  cursor: pointer;
+  color: #ffff;
+  margin: 10px;
+  padding: 5px;
 }
 
 .overlay-bild {
@@ -244,12 +260,6 @@ main hr {
 
 .overlay-bild #robert {
   width: 60%;
-}
-
-#button1,
-#button2,
-#button3 {
-  cursor: pointer;
 }
 
 .prev,
@@ -353,13 +363,16 @@ main hr {
     -webkit-box-shadow: 0px -2px 16px 0px #707070;
             box-shadow: 0px -2px 16px 0px #707070;
   }
-  #main-index img {
+  #main-index div {
     width: 30%;
+  }
+  #main-index div a img {
+    width: 80%;
     margin-top: 2.5%;
     -webkit-box-shadow: 0px 8px 16px 0px #707070;
             box-shadow: 0px 8px 16px 0px #707070;
   }
-  #main-index #artist-namn {
+  #main-index div #artist-namn {
     font-size: 20px;
     margin-top: 10px;
   }

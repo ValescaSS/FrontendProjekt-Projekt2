@@ -1,24 +1,23 @@
-let slideIndex1 = 1;
-showSlides1(slideIndex1);
+// slideshow 1 - pagaende sida
 
-function plusSlides1(n) {
-  showSlides1((slideIndex1 += n));
+let slideIndex1 = 1;
+showSlides(slideIndex1, 'mySlides1');
+showSlides(slideIndex1, 'mySlides2');
+showSlides(slideIndex1, 'mySlides3');
+
+function plusSlides(n, x) {
+  showSlides(slideIndex1 += n, x);
 }
 
-// function currentSlide1(n) {
-//   showSlides1((slideIndex1 = n));
-// }
-
-function showSlides1(n) {
-  let i;
-  let slides1 = document.getElementsByClassName("mySlides1");
+function showSlides(n, x) {
+  let slides1 = document.getElementsByClassName(x);
   if (n > slides1.length) {
     slideIndex1 = 1;
   }
   if (n < 1) {
     slideIndex1 = slides1.length;
   }
-  for (i = 0; i < slides1.length; i++) {
+  for (let i = 0; i < slides1.length; i++) {
     slides1[i].style.display = "none";
   }
   slides1[slideIndex1 - 1].style.display = "flex";
