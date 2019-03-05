@@ -98,6 +98,9 @@ main {
     img {
       cursor: pointer;
     }
+    img:hover {
+      opacity: 0.9;
+    }
     div {
       text-align: justify;
       h3 {
@@ -288,10 +291,23 @@ main {
     }
     input {
       width: 12%;
+      height: 20px;
       margin-left: auto;
       margin-top: 0;
       margin-bottom: 0;
       margin-right: 0;
+      font-family: $font-alt;
+      border-radius: 20px;
+      border: none;
+      font-size: 14px;
+    }
+    button {
+      color: $clr-white;
+      background-color: $clr-hf;
+      border: none;
+      cursor: pointer;
+      font-size: 17px;
+      // width: 20px;
     }
   }
 
@@ -311,7 +327,7 @@ main {
           box-shadow: 0px 8px 16px 0px $clr-shd;
         }
       }
-      #artist-namn {
+      .artist-namn {
         font-size: 20px;
         margin-top: 10px;
       }

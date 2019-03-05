@@ -19,12 +19,3 @@ function showSlidesAuto() {
   setTimeout(showSlidesAuto, 2500);
 }
 showSlidesAuto();
-
-// overlay - pagaende sida
-
-function on(x) {
-  document.getElementById(x).style.display = "block";
-}
-function off(y) {
-  document.getElementById(y).style.display = "none";
-}
