@@ -12,15 +12,17 @@
     <title>Pågående</title>
   </head>
   <body>
-    <script src="js/script.js"></script>
     <header>
       <img src="images/logo.jpg" alt="Art logo" id="art-logo" />
       <h1>LIVE ART GALLERY</h1>
 
-      <ul>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction('nav')">
+        <i class="fa fa-bars"></i>
+      </a>
+      <ul id="nav">
         <li><a href="index.html">HEM</a></li>
         <li class="dropdown">
-          <a href="pagaende.html" class="active">UTSTÄLLNINGAR</a>
+          <a id="utstallningar" href="pagaende.html" class="active">UTSTÄLLNINGAR</a>
           <div class="dropdown-content">
             <a href="pagaende.html" class="active">PÅGÅENDE</a>
             <a href="kommande.html">KOMMANDE</a>
@@ -31,8 +33,21 @@
       </ul>
 
       <input type="text" placeholder="  Sök" />
-      <button><i class="fa fa-search"></i></button>
+      <button class="search-button"><i class="fa fa-search"></i></button>
+      <i class="fa fa-share-alt"></i>
     </header>
+
+    <script>
+        
+      function myFunction() {
+        let x = document.getElementById("nav");
+        if (x.style.display === "flex") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "flex";
+        }
+      }
+    </script>
 
     <main id="main-pagaende" class="main">
       <span id="pawelczerwinski"></span>
@@ -226,6 +241,13 @@
           alt="Mihai Surdu"
         />
       </div>
+      <div class="overlay-bild mySlides3">
+        <img
+          id="ingennamn"
+          src="images/bild-unplash.jpg"
+          alt="ingen-namn"
+        />
+      </div>
       <a class="prev" onclick="plusSlides(-1, 'mySlides3')">&#10094;</a>
       <a class="next" onclick="plusSlides(1, 'mySlides3')">&#10095;</a>
       <div class="button">
@@ -237,22 +259,11 @@
 
     <footer>
       <p>Copyright 2019 - Valesca Sarrocchi</p>
-      <div id="social-media">
-        <img
-          src="images/twitter-logo.png"
-          alt="Twitter logo"
-          class="social-media-logo"
-        />
-        <img
-          src="images/facebook-symbol.png"
-          alt="Facebook logo"
-          class="social-media-logo"
-        />
-        <img
-          src="images/Pinterest-logo.png"
-          alt="Pinterest logo"
-          class="social-media-logo"
-        />
+      <div class="social-media">
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-twitter-square"></i>
+        <i class="fa fa-facebook-square"></i>
+        <i class="fa fa-pinterest-square"></i>
       </div>
     </footer>
 

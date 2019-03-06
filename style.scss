@@ -14,9 +14,14 @@ $clr-silk: #dcd0c0;
 * {
   box-sizing: border-box;
 }
+html,
 body {
-  min-height: 100vh;
   margin: 0;
+  padding: 0;
+  // height: 100%;
+}
+body {
+  // min-height: 100vh;
   background-color: $clr-bg;
   font-family: $font-alt;
 }
@@ -26,30 +31,97 @@ body {
 header,
 footer {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   background-color: $clr-hf;
   color: $clr-white;
   width: 100%;
 }
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 10;
   box-shadow: 0px 5px 16px 0px $clr-shd;
+  #art-logo {
+    width: 20%;
+    margin: 0 5%;
+  }
+  h1 {
+    width: 20%;
+    font-size: 20px;
+  }
+  ul {
+    // border: 1px solid black;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 57px;
+    list-style: none;
+    background: rgba(7, 7, 7, 0.5);
+    width: 100%;
+    li {
+      padding: 10px;
+      // #utstallningar {
+      //   // display: none;
+      // }
+      a {
+        color: $clr-white;
+        text-decoration: none;
+        padding: 10px;
+      }
+      #dropdown-content {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 200px;
+        a {
+          display: block;
+        }
+      }
+    }
+    // .dropdown-content {
+    // }
+  }
+  input {
+    display: none;
+  }
+  .search-button {
+    color: $clr-white;
+    background-color: $clr-hf;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    display: none;
+  }
+  .fa-share-alt {
+    display: none;
+  }
+  .icon {
+    margin-left: auto;
+    margin-right: 5%;
+    .fa-bars {
+      color: $clr-white;
+      background-color: $clr-hf;
+      font-size: 30px;
+    }
+  }
 }
 .banner {
   width: 100%;
-  position: sticky;
-  top: 65px;
+  position: relative;
+  top: 70px;
   z-index: -10;
 }
 
 // main
 
 main {
+  // border: 1px solid black;
+
   color: $clr-hf;
   background-color: $clr-bg;
   width: 100%;
+  // height: 100%;
   hr {
     // border: 0.5px solid $clr-gray;
     width: 70%;
@@ -57,15 +129,21 @@ main {
   }
 }
 #main-index {
+  margin-top: 60px;
+  // border: 1px solid black;
+  padding-bottom: 10.5%;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: 0 0 16px $clr-shd-i;
+  // height: 100%;
   div {
     a {
       img {
         margin: auto;
         display: block;
+        width: 85%;
+        margin: 2% auto;
       }
     }
 
@@ -90,18 +168,28 @@ main {
 }
 
 #main-pagaende {
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   .white-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: $clr-white;
+    width: 95%;
+    margin: 2% 0;
     img {
       cursor: pointer;
+      width: 70%;
+      box-shadow: 0px 8px 16px 0px $clr-shd;
+      margin: 5% 0;
     }
     img:hover {
       opacity: 0.9;
     }
     div {
+      margin: 5%;
       text-align: justify;
       h3 {
         text-align: center;
@@ -115,52 +203,15 @@ main {
   }
 }
 
-#main-kommande {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    img {
-      box-shadow: 0px 8px 16px 0px $clr-shd;
-    }
-    h2 {
-      margin: 0;
-    }
-    p {
-      margin: 0;
-    }
-  }
-}
-
-#main-tidigare {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  section {
-    img {
-      width: 100%;
-      box-shadow: 0px 8px 16px 0px $clr-shd;
-    }
-    p {
-      text-align: center;
-      background-color: $clr-white;
-    }
-  }
-}
-
 // overlay och slideshow pagaende sida
 
 .overlay {
   position: fixed;
   display: none;
-  width: 60%;
-  height: 80%;
+  width: 90%;
+  height: 70%;
   top: 15%;
-  left: 20%;
+  left: 5%;
   background-color: rgba(55, 55, 55, 0.9);
   // z-index: 10;
   .button {
@@ -187,17 +238,14 @@ main {
   #amine,
   #aman,
   #fabian,
-  #daniele {
-    width: 45%;
-  }
+  #daniele,
   #gustavo,
   #andrey,
   #diana,
-  #mihai {
-    width: 70%;
-  }
-  #robert {
-    width: 60%;
+  #mihai,
+  #robert,
+  #ingennamn {
+    width: 90%;
   }
 }
 
@@ -229,6 +277,157 @@ main {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+#main-kommande {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 90%;
+      margin: 10px;
+      box-shadow: 0px 8px 16px 0px $clr-shd;
+    }
+    #jg-bild {
+      width: 70%;
+    }
+    h2 {
+      text-align: center;
+      margin: 0;
+    }
+    p {
+      margin: 0 0 30px 0;
+    }
+  }
+}
+
+#main-tidigare {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  section {
+    width: 90%;
+    img {
+      width: 100%;
+      box-shadow: 0px 8px 16px 0px $clr-shd;
+    }
+    p {
+      text-align: center;
+      margin-top: 0;
+      padding: 10px;
+      background-color: $clr-white;
+    }
+  }
+}
+
+#main-kontakt {
+  // border: 1px solid black;
+  margin-top: 80px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "rubrik"
+    "line"
+    "adress"
+    "karta"
+    // "linje"
+    "formular";
+  .rubrik {
+    grid-area: rubrik;
+    text-align: center;
+  }
+  .line {
+    grid-area: line;
+    width: 100%;
+    margin: 3% 0 4% 0;
+  }
+  .adress {
+    grid-area: adress;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .p-rubrik {
+      font-size: 1.5em;
+      margin: 0;
+      padding: 0;
+    }
+    .p-adress {
+      line-height: 2.5em;
+    }
+  }
+  .line-two {
+    display: none;
+  }
+  .karta {
+    grid-area: karta;
+    height: 300px;
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 1px solid $clr-gray;
+    }
+  }
+  .formular {
+    grid-area: formular;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    .p-rubrik {
+      font-size: 1.5em;
+      align-self: flex-start;
+      margin-left: 0;
+      margin-top: 0;
+    }
+    input {
+      border: 0;
+      width: 100%;
+      height: 40px;
+      margin-top: 1.5%;
+      margin-bottom: 5%;
+    }
+    label {
+      align-self: flex-start;
+    }
+    #meddelande {
+      height: 130px;
+    }
+    a {
+      width: 20%;
+      background-color: $clr-gold;
+      padding: 1.5%;
+      text-align: center;
+      text-decoration: none;
+      color: $clr-hf;
+      border-radius: 2.5px;
+      margin-left: auto;
+    }
+  }
+}
+
+footer {
+  height: 110px;
+  padding: 5px;
+  justify-content: center;
+  .social-media {
+    margin-bottom: 15px;
+    i {
+      font-size: 35px;
+    }
+  }
+}
+
 // desktop layout
 
 @media (min-width: 768px) {
@@ -241,22 +440,30 @@ main {
   header {
     #art-logo {
       width: 6%;
+      margin: 0;
     }
     h1 {
       font-size: 1.7em;
       margin-left: 2%;
       margin-top: 0;
       margin-bottom: 0;
-      margin-right: auto;
     }
     ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
       width: 40%;
       padding: 0;
       margin: auto;
-      display: flex;
-      justify-content: space-between;
       list-style: none;
+      position: relative;
+      top: 0;
+      background: none;
       li {
+        #utstallningar {
+          display: inline;
+        }
         a {
           text-decoration: none;
           font-size: 14px;
@@ -270,10 +477,11 @@ main {
         }
       }
       .dropdown-content {
-        background-color: $clr-shd;
         background: rgba(7, 7, 7, 0.5);
         display: none;
         position: absolute;
+        padding: 8px;
+
         a {
           display: block;
           margin: 5px;
@@ -287,28 +495,44 @@ main {
         width: auto;
         margin: 0 auto;
         z-index: 15;
+        top: 30px;
+        left: 190px;
       }
     }
     input {
+      display: block;
       width: 12%;
       height: 20px;
       margin-left: auto;
       margin-top: 0;
       margin-bottom: 0;
-      margin-right: 0;
       font-family: $font-alt;
       border-radius: 20px;
       border: none;
       font-size: 14px;
     }
-    button {
-      color: $clr-white;
-      background-color: $clr-hf;
-      border: none;
-      cursor: pointer;
-      font-size: 17px;
-      // width: 20px;
+    .search-button {
+      display: block;
+      margin-right: 25px;
     }
+    .fa-share-alt {
+      display: block;
+      font-size: 25px;
+      cursor: pointer;
+    }
+    .icon {
+      margin: 0;
+      .fa-bars {
+        display: none;
+      }
+    }
+  }
+
+  // banner
+
+  .banner {
+    position: sticky;
+    top: 40px;
   }
 
   // main
@@ -316,10 +540,14 @@ main {
   main {
     padding: 2.5% 0 5% 0;
   }
+
   #main-index {
+    margin-top: 60px;
     box-shadow: 0px -2px 16px 0px $clr-shd;
+    margin-top: 0;
+    padding-bottom: 5%;
     div {
-      width: 30%;
+      width: 35%;
       a {
         img {
           width: 80%;
@@ -333,128 +561,120 @@ main {
       }
     }
   }
+
   #main-pagaende {
+    margin-top: 60px;
     .white-box {
-      width: 70%;
-      height: 100%;
       margin: 20px;
-      display: flex;
-      flex-wrap: wrap;
+      flex-direction: row;
       justify-content: space-evenly;
       align-items: center;
+      width: 70%;
+      // height: 100%;
       img {
         width: 25%;
-        height: 100%;
-        margin: 5% 0;
-        box-shadow: 0px 8px 16px 0px $clr-shd;
+        // height: 100%;
       }
       div {
         width: 40%;
+        margin: 2%;
       }
     }
   }
+
+  // overlay och slideshow pagaende sida
+
+  .overlay {
+    width: 60%;
+    height: 80%;
+    left: 20%;
+  }
+  .overlay-bild {
+    #pawel,
+    #hudson,
+    #fabian,
+    #amine,
+    #aman,
+    #fabian,
+    #daniele {
+      width: 45%;
+    }
+    #gustavo,
+    #andrey,
+    #diana,
+    #mihai {
+      width: 70%;
+    }
+    #robert {
+      width: 60%;
+    }
+    #ingennamn {
+      width: 70%;
+    }
+  }
+
   #main-kommande {
+    margin-top: 60px;
     div {
       width: 50%;
       margin: 30px;
       img {
         width: 100%;
-        margin: 10px;
+        margin: 0 0 10px 0;
       }
       #jg-bild {
         width: 60%;
       }
+      p {
+        margin: 0;
+      }
     }
   }
+
   #main-kontakt {
+    margin-top: 60px;
     width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 5%;
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
     grid-template-areas:
       "rubrik rubrik"
       "line line"
       "adress formular"
       "linje formular"
       "karta formular";
-    .rubrik {
-      grid-area: rubrik;
-      text-align: center;
-    }
-    .line {
-      grid-area: line;
-      width: 100%;
-      margin: 3% 0 4% 0;
-    }
-    .adress {
-      grid-area: adress;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-
-      .p-rubrik {
-        font-size: 1.5em;
-        margin: 0;
-        padding: 0;
-      }
-      .p-adress {
-        line-height: 2.5em;
-      }
-    }
     .line-two {
+      display: block;
       grid-area: linje;
       width: 90%;
       margin: 4% 0 8% 0;
     }
     .karta {
-      grid-area: karta;
-      height: 300px;
       iframe {
         width: 90%;
-        height: 100%;
-        border: 1px solid $clr-gray;
       }
     }
     .formular {
-      grid-area: formular;
-      display: flex;
-      flex-direction: column;
+      margin: 0;
       align-items: flex-end;
-      .p-rubrik {
-        font-size: 1.5em;
-        align-self: flex-start;
+
+      .p-rubrik,
+      label {
         margin-left: 10%;
-        margin-top: 0;
       }
       input {
-        border: 0;
         width: 90%;
-        height: 7%;
-        margin-top: 1.5%;
-        margin-bottom: 5%;
-      }
-      label {
-        align-self: flex-start;
-        margin-left: 10%;
       }
       #meddelande {
         height: 30%;
       }
       a {
         width: 15%;
-        background-color: $clr-gold;
-        padding: 1.5%;
-        text-align: center;
-        text-decoration: none;
-        color: $clr-hf;
-        border-radius: 2.5px;
+        margin: 0;
       }
     }
   }
+
   #main-tidigare {
+    margin-top: 60px;
     section {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -465,7 +685,6 @@ main {
       }
       p {
         margin: 0;
-        padding: 10px;
         margin-bottom: 20px;
       }
     }
@@ -475,12 +694,13 @@ main {
 
   footer {
     height: 80px;
-    #social-media {
+    justify-content: unset;
+    .social-media {
       margin-left: auto;
-      .social-media-logo {
-        width: 30px;
-        height: 30px;
-        margin: 5px;
+      margin-bottom: 0;
+      i {
+        margin: 4px;
+        font-size: 30px;
       }
     }
   }
