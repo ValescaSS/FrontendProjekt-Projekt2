@@ -18,6 +18,8 @@ html,
 body {
   margin: 0;
   padding: 0;
+  min-width: 0; 
+  min-height: 0; 
   // height: 100%;
 }
 body {
@@ -51,36 +53,38 @@ header {
     font-size: 20px;
   }
   ul {
-    // border: 1px solid black;
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 57px;
+    top: 100%;
     list-style: none;
     background: rgba(7, 7, 7, 0.5);
     width: 100%;
+    align-items: center;
+    margin: 0;
+    padding: 0;
     li {
-      padding: 10px;
-      // #utstallningar {
-      //   // display: none;
-      // }
+      padding: 15px;
+      #utstallningar {
+        i {
+          margin-left: 5px;
+        }
+      }
       a {
         color: $clr-white;
         text-decoration: none;
         padding: 10px;
       }
-      #dropdown-content {
+      .dropdown-content {
         display: none;
-        position: absolute;
-        top: 0;
-        left: 200px;
+        flex-direction: column;
+        align-items: center;
         a {
-          display: block;
+          display: flex;
+          font-size: 14px;
         }
       }
     }
-    // .dropdown-content {
-    // }
   }
   input {
     display: none;
@@ -402,6 +406,10 @@ main {
     }
     #meddelande {
       height: 130px;
+    }
+    sup {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
     }
     a {
       width: 20%;

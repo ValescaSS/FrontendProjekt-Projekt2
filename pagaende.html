@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -16,14 +18,19 @@
       <img src="images/logo.jpg" alt="Art logo" id="art-logo" />
       <h1>LIVE ART GALLERY</h1>
 
-      <a href="javascript:void(0);" class="icon" onclick="myFunction('nav')">
+      <a href="javascript:void(0);" class="icon" onclick="dropDown('nav')">
         <i class="fa fa-bars"></i>
       </a>
       <ul id="nav">
         <li><a href="index.html">HEM</a></li>
         <li class="dropdown">
-          <a id="utstallningar" href="pagaende.html" class="active">UTSTÄLLNINGAR</a>
-          <div class="dropdown-content">
+          <a
+            id="utstallningar"
+            class="active"
+            onclick="dropDown('mobil-dropdown')"
+            >UTSTÄLLNINGAR<i class="fa fa-plus-square-o"></i
+          ></a>
+          <div class="dropdown-content" id="mobil-dropdown">
             <a href="pagaende.html" class="active">PÅGÅENDE</a>
             <a href="kommande.html">KOMMANDE</a>
             <a href="tidigare.html">TIDIGARE</a>
@@ -230,11 +237,7 @@
         />
       </div>
       <div class="overlay-bild mySlides3">
-        <img
-          id="ingennamn"
-          src="images/bild-unplash.jpg"
-          alt="ingen-namn"
-        />
+        <img id="ingennamn" src="images/bild-unplash.jpg" alt="ingen-namn" />
       </div>
       <a class="prev" onclick="plusSlides(-1, 'mySlides3')">&#10094;</a>
       <a class="next" onclick="plusSlides(1, 'mySlides3')">&#10095;</a>
@@ -248,10 +251,10 @@
     <footer>
       <p>Copyright 2019 - Valesca Sarrocchi</p>
       <div class="social-media">
-        <i class="fa fa-instagram"></i>
-        <i class="fa fa-twitter-square"></i>
-        <i class="fa fa-facebook-square"></i>
-        <i class="fa fa-pinterest-square"></i>
+        <i class="fa fa-instagram" title="Instagram"></i>
+        <i class="fa fa-twitter-square" title="Twitter"></i>
+        <i class="fa fa-facebook-square" title="Facebook"></i>
+        <i class="fa fa-pinterest-square" title="Pinterest"></i>
       </div>
     </footer>
 

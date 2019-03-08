@@ -8,6 +8,8 @@ html,
 body {
   margin: 0;
   padding: 0;
+  min-width: 0;
+  min-height: 0;
 }
 
 body {
@@ -55,14 +57,23 @@ header ul {
       -ms-flex-direction: column;
           flex-direction: column;
   position: absolute;
-  top: 57px;
+  top: 100%;
   list-style: none;
   background: rgba(7, 7, 7, 0.5);
   width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 header ul li {
-  padding: 10px;
+  padding: 15px;
+}
+
+header ul li #utstallningar i {
+  margin-left: 5px;
 }
 
 header ul li a {
@@ -71,15 +82,22 @@ header ul li a {
   padding: 10px;
 }
 
-header ul li #dropdown-content {
+header ul li .dropdown-content {
   display: none;
-  position: absolute;
-  top: 0;
-  left: 200px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-header ul li #dropdown-content a {
-  display: block;
+header ul li .dropdown-content a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
 }
 
 header input {
@@ -515,6 +533,11 @@ main hr {
 
 #main-kontakt .formular #meddelande {
   height: 130px;
+}
+
+#main-kontakt .formular sup {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
 #main-kontakt .formular a {
