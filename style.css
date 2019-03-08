@@ -79,7 +79,7 @@ header ul li #utstallningar i {
 header ul li a {
   color: #ffff;
   text-decoration: none;
-  padding: 10px;
+  padding: 25px;
 }
 
 header ul li .dropdown-content {
@@ -98,6 +98,7 @@ header ul li .dropdown-content a {
   display: -ms-flexbox;
   display: flex;
   font-size: 14px;
+  padding-bottom: 0;
 }
 
 header input {
@@ -304,14 +305,17 @@ main hr {
 .overlay-bild #amine,
 .overlay-bild #aman,
 .overlay-bild #fabian,
-.overlay-bild #daniele,
+.overlay-bild #daniele {
+  width: 60%;
+}
+
 .overlay-bild #gustavo,
 .overlay-bild #andrey,
 .overlay-bild #diana,
-.overlay-bild #mihai,
 .overlay-bild #robert,
+.overlay-bild #mihai,
 .overlay-bild #ingennamn {
-  width: 90%;
+  width: 80%;
 }
 
 .prev,
@@ -610,6 +614,7 @@ footer .social-media i {
   header ul li a {
     text-decoration: none;
     font-size: 14px;
+    padding: 0;
     color: #ffff;
   }
   header ul li a:hover {
@@ -627,7 +632,7 @@ footer .social-media i {
   header ul .dropdown-content a {
     display: block;
     margin: 5px;
-    padding: 5px;
+    padding: 10px 0;
     text-align: center;
     color: #ffff;
   }
