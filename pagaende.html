@@ -18,17 +18,18 @@
       <img src="images/logo.jpg" alt="Art logo" id="art-logo" />
       <h1>LIVE ART GALLERY</h1>
 
-      <a href="javascript:void(0);" class="icon" onclick="dropDown('nav')">
-        <i class="fa fa-bars"></i>
+      <a class="icon" onclick="dropDown('nav', 'icon1', 'icon2')">
+        <i class="fa fa-bars" id="icon1"></i>
+        <i class="fa fa-times" id="icon2"></i>
       </a>
       <ul id="nav">
         <li><a href="index.html">HEM</a></li>
         <li class="dropdown">
           <a
             id="utstallningar"
-            class="active"
-            onclick="dropDown('mobil-dropdown')"
-            >UTSTÄLLNINGAR<i class="fa fa-plus-square-o"></i
+            onclick="dropDown('mobil-dropdown', 'icon3', 'icon4')"
+            >UTSTÄLLNINGAR<i class="fa fa-plus-square-o" id="icon3"></i
+            ><i class="fa fa-minus-square-o" id="icon4"></i
           ></a>
           <div class="dropdown-content" id="mobil-dropdown">
             <a href="pagaende.html" class="active">PÅGÅENDE</a>

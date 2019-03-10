@@ -18,8 +18,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  min-width: 0; 
-  min-height: 0; 
+  // min-width: 0;
+  // min-height: 0;
   // height: 100%;
 }
 body {
@@ -64,16 +64,23 @@ header {
     margin: 0;
     padding: 0;
     li {
-      padding: 15px;
+      padding: 10px;
+      margin: 5px;
       #utstallningar {
+        display: flex;
         i {
           margin-left: 5px;
+        }
+        #icon3 {
+          display: flex;
+        }
+        #icon4 {
+          display: none;
         }
       }
       a {
         color: $clr-white;
         text-decoration: none;
-        padding: 25px;
       }
       .dropdown-content {
         display: none;
@@ -83,6 +90,7 @@ header {
           display: flex;
           font-size: 14px;
           padding-bottom: 0;
+          padding-top: 30px;
         }
       }
     }
@@ -104,10 +112,17 @@ header {
   .icon {
     margin-left: auto;
     margin-right: 5%;
+    .fa-times,
     .fa-bars {
-      color: $clr-white;
-      background-color: $clr-hf;
+      // color: $clr-white;
+      // background-color: $clr-hf;
       font-size: 30px;
+    }
+    #icon1 {
+      display: flex;
+    }
+    #icon2 {
+      display: none;
     }
   }
 }
@@ -472,8 +487,16 @@ footer {
       top: 0;
       background: none;
       li {
+        display: flex;
+        justify-content: center;
         #utstallningar {
           display: inline;
+          #icon3 {
+            display: none;
+          }
+          #icon4 {
+            display: none;
+          }
         }
         a {
           text-decoration: none;
@@ -487,25 +510,20 @@ footer {
         .active {
           text-decoration: underline;
         }
-      }
-      .dropdown-content {
-        background: rgba(7, 7, 7, 0.5);
-        display: none;
-        position: absolute;
-        padding: 8px;
-
-        a {
-          display: block;
-          margin: 5px;
-          padding: 10px 0;
-          text-align: center;
-          color: $clr-white;
+        .dropdown-content {
+          display: none;
+          background: rgba(7, 7, 7, 0.5);
+          position: absolute;
+          top: 60%;
+          padding: 1%;
+          a {
+            display: block;
+            padding: 10px;
+          }
         }
       }
       .dropdown:hover .dropdown-content {
-        display: block;
-        width: auto;
-        margin: 0 auto;
+        display: flex;
         z-index: 15;
       }
     }
@@ -531,10 +549,7 @@ footer {
       cursor: pointer;
     }
     .icon {
-      margin: 0;
-      .fa-bars {
-        display: none;
-      }
+      display: none;
     }
   }
 

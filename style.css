@@ -8,8 +8,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  min-width: 0;
-  min-height: 0;
 }
 
 body {
@@ -69,17 +67,33 @@ header ul {
 }
 
 header ul li {
-  padding: 15px;
+  padding: 10px;
+  margin: 5px;
+}
+
+header ul li #utstallningar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 header ul li #utstallningar i {
   margin-left: 5px;
 }
 
+header ul li #utstallningar #icon3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header ul li #utstallningar #icon4 {
+  display: none;
+}
+
 header ul li a {
   color: #ffff;
   text-decoration: none;
-  padding: 25px;
 }
 
 header ul li .dropdown-content {
@@ -99,6 +113,7 @@ header ul li .dropdown-content a {
   display: flex;
   font-size: 14px;
   padding-bottom: 0;
+  padding-top: 30px;
 }
 
 header input {
@@ -123,10 +138,19 @@ header .icon {
   margin-right: 5%;
 }
 
+header .icon .fa-times,
 header .icon .fa-bars {
-  color: #ffff;
-  background-color: #373737;
   font-size: 30px;
+}
+
+header .icon #icon1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .icon #icon2 {
+  display: none;
 }
 
 .banner {
@@ -608,8 +632,22 @@ footer .social-media i {
     top: 0;
     background: none;
   }
+  header ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   header ul li #utstallningar {
     display: inline;
+  }
+  header ul li #utstallningar #icon3 {
+    display: none;
+  }
+  header ul li #utstallningar #icon4 {
+    display: none;
   }
   header ul li a {
     text-decoration: none;
@@ -623,23 +661,21 @@ footer .social-media i {
   header ul li .active {
     text-decoration: underline;
   }
-  header ul .dropdown-content {
-    background: rgba(7, 7, 7, 0.5);
+  header ul li .dropdown-content {
     display: none;
+    background: rgba(7, 7, 7, 0.5);
     position: absolute;
-    padding: 8px;
+    top: 60%;
+    padding: 1%;
   }
-  header ul .dropdown-content a {
+  header ul li .dropdown-content a {
     display: block;
-    margin: 5px;
-    padding: 10px 0;
-    text-align: center;
-    color: #ffff;
+    padding: 10px;
   }
   header ul .dropdown:hover .dropdown-content {
-    display: block;
-    width: auto;
-    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     z-index: 15;
   }
   header input {
@@ -664,9 +700,6 @@ footer .social-media i {
     cursor: pointer;
   }
   header .icon {
-    margin: 0;
-  }
-  header .icon .fa-bars {
     display: none;
   }
   .banner {

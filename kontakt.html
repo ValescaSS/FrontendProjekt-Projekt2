@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -18,13 +18,19 @@
       <img src="images/logo.jpg" alt="Art logo" id="art-logo" />
       <h1>LIVE ART GALLERY</h1>
 
-      <a href="javascript:void(0);" class="icon" onclick="dropDown('nav')">
-        <i class="fa fa-bars"></i>
+      <a class="icon" onclick="dropDown('nav', 'icon1', 'icon2')">
+        <i class="fa fa-bars" id="icon1"></i>
+        <i class="fa fa-times" id="icon2"></i>
       </a>
       <ul id="nav">
         <li><a href="index.html">HEM</a></li>
         <li class="dropdown">
-          <a id="utstallningar" onclick="dropDown('mobil-dropdown')">UTSTÄLLNINGAR<i class="fa fa-plus-square-o"></i></a>
+          <a
+            id="utstallningar"
+            onclick="dropDown('mobil-dropdown', 'icon3', 'icon4')"
+            >UTSTÄLLNINGAR<i class="fa fa-plus-square-o" id="icon3"></i
+            ><i class="fa fa-minus-square-o" id="icon4"></i
+          ></a>
           <div class="dropdown-content" id="mobil-dropdown">
             <a href="pagaende.html">PÅGÅENDE</a>
             <a href="kommande.html">KOMMANDE</a>
