@@ -82,6 +82,7 @@ header .icon #icon2 {
 }
 
 header input {
+  display: none;
   font-family: "Poiret One", cursive;
   border: none;
   position: absolute;
