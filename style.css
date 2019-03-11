@@ -38,14 +38,75 @@ header {
           box-shadow: 0px 5px 16px 0px #707070;
 }
 
-header #art-logo {
+header .logo-box {
+  text-decoration: none;
   width: 20%;
-  margin: 0 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1%;
+  padding: 1%;
+}
+
+header .logo-box #art-logo {
+  width: 100%;
 }
 
 header h1 {
-  width: 20%;
   font-size: 15px;
+  width: 20%;
+  text-align: center;
+  margin: 1%;
+  padding: 1%;
+}
+
+header .icon {
+  margin: 1% 1% 1% auto;
+  padding: 1%;
+}
+
+header .icon #icon1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 25px;
+}
+
+header .icon #icon2 {
+  display: none;
+  font-size: 20px;
+}
+
+header input {
+  font-family: "Poiret One", cursive;
+  border: none;
+  position: absolute;
+  left: 50%;
+  width: 30%;
+  height: 30%;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+header .search-button {
+  color: #ffff;
+  background-color: #373737;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  position: absolute;
+  left: 82%;
+  margin: 0;
+  padding: 0;
+}
+
+header .fa-share-alt {
+  display: none;
 }
 
 header ul {
@@ -63,12 +124,18 @@ header ul {
       -ms-flex-align: center;
           align-items: center;
   margin: 0;
-  padding: 0;
+  padding: 10px;
 }
 
 header ul li {
   padding: 10px;
-  margin: 5px;
+}
+
+header ul li a {
+  color: #ffff;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 
 header ul li #utstallningar {
@@ -77,23 +144,20 @@ header ul li #utstallningar {
   display: flex;
 }
 
-header ul li #utstallningar i {
-  margin-left: 5px;
-}
-
 header ul li #utstallningar #icon3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: 5px;
 }
 
 header ul li #utstallningar #icon4 {
   display: none;
+  margin-left: 5px;
 }
 
-header ul li a {
-  color: #ffff;
-  text-decoration: none;
+header ul li .active {
+  text-decoration: underline;
 }
 
 header ul li .dropdown-content {
@@ -108,55 +172,14 @@ header ul li .dropdown-content {
 }
 
 header ul li .dropdown-content a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   font-size: 14px;
-  padding-bottom: 0;
-  padding-top: 30px;
-}
-
-header input {
-  display: none;
-}
-
-header .search-button {
-  color: #ffff;
-  background-color: #373737;
-  border: none;
-  cursor: pointer;
-  font-size: 17px;
-  display: none;
-}
-
-header .fa-share-alt {
-  display: none;
-}
-
-header .icon {
-  margin-left: auto;
-  margin-right: 5%;
-}
-
-header .icon .fa-times,
-header .icon .fa-bars {
-  font-size: 30px;
-}
-
-header .icon #icon1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-header .icon #icon2 {
-  display: none;
+  padding-top: 20px;
 }
 
 .banner {
   width: 100%;
   position: relative;
-  top: 55px;
+  top: 50px;
   z-index: -10;
 }
 
@@ -168,11 +191,11 @@ main {
 
 main hr {
   width: 70%;
-  margin: 2% 0;
+  margin: 0;
 }
 
 #main-index {
-  margin-top: 52px;
+  margin-top: 46px;
   padding-bottom: 10.5%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -600,15 +623,19 @@ footer .social-media i {
   footer {
     padding: 0.5% 4%;
   }
-  header #art-logo {
+  header .logo-box {
     width: 6%;
+    padding: 0;
     margin: 0;
+  }
+  header .logo-box #art-logo {
+    margin: auto;
   }
   header h1 {
     font-size: 1.7em;
-    margin-left: 2%;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0 auto;
+    padding: 0;
+    width: auto;
   }
   header ul {
     display: -webkit-box;
@@ -625,7 +652,6 @@ footer .social-media i {
         -ms-flex-align: center;
             align-items: center;
     width: 40%;
-    padding: 0;
     margin: auto;
     list-style: none;
     position: relative;
@@ -633,6 +659,8 @@ footer .social-media i {
     background: none;
   }
   header ul li {
+    margin: 0;
+    padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -640,64 +668,62 @@ footer .social-media i {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  header ul li #utstallningar {
-    display: inline;
-  }
-  header ul li #utstallningar #icon3 {
-    display: none;
-  }
-  header ul li #utstallningar #icon4 {
-    display: none;
-  }
   header ul li a {
     text-decoration: none;
     font-size: 14px;
-    padding: 0;
     color: #ffff;
   }
   header ul li a:hover {
     color: #c0b283;
   }
-  header ul li .active {
-    text-decoration: underline;
+  header ul li #utstallningar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+  }
+  header ul li #utstallningar #icon3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header ul li #utstallningar #icon4 {
+    display: none;
+  }
+  header ul li #utstallningar a {
+    margin: 0;
+    padding: 0;
   }
   header ul li .dropdown-content {
     display: none;
     background: rgba(7, 7, 7, 0.5);
     position: absolute;
-    top: 60%;
+    top: 80%;
     padding: 1%;
   }
   header ul li .dropdown-content a {
     display: block;
     padding: 10px;
   }
-  header ul .dropdown:hover .dropdown-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    z-index: 15;
-  }
   header input {
+    position: unset;
     display: block;
     width: 12%;
     height: 20px;
-    margin-left: auto;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-family: "Poiret One", cursive;
+    margin: 0 0 0 auto;
     border-radius: 20px;
-    border: none;
     font-size: 14px;
   }
   header .search-button {
+    position: unset;
     display: block;
-    margin-right: 25px;
+    margin-left: 5px;
   }
   header .fa-share-alt {
     display: block;
     font-size: 25px;
     cursor: pointer;
+    margin: auto 0 auto auto;
   }
   header .icon {
     display: none;

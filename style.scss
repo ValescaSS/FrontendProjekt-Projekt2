@@ -18,12 +18,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  // min-width: 0;
-  // min-height: 0;
-  // height: 100%;
 }
 body {
-  // min-height: 100vh;
   background-color: $clr-bg;
   font-family: $font-alt;
 }
@@ -44,13 +40,60 @@ header {
   top: 0;
   z-index: 10;
   box-shadow: 0px 5px 16px 0px $clr-shd;
-  #art-logo {
+  .logo-box {
+    text-decoration: none;
     width: 20%;
-    margin: 0 5%;
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    padding: 1%;
+    #art-logo {
+      width: 100%;
+    }
   }
   h1 {
-    width: 20%;
     font-size: 15px;
+    width: 20%;
+    text-align: center;
+    margin: 1%;
+    padding: 1%;
+  }
+  .icon {
+    margin: 1% 1% 1% auto;
+    padding: 1%;
+    #icon1 {
+      display: flex;
+      font-size: 25px;
+    }
+    #icon2 {
+      display: none;
+      font-size: 20px;
+    }
+  }
+  input {
+    font-family: $font-alt;
+    border: none;
+    position: absolute;
+    left: 50%;
+    width: 30%;
+    height: 30%;
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+  }
+  .search-button {
+    color: $clr-white;
+    background-color: $clr-hf;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    position: absolute;
+    left: 82%;
+    margin: 0;
+    padding: 0;
+  }
+  .fa-share-alt {
+    display: none;
   }
   ul {
     display: none;
@@ -62,74 +105,45 @@ header {
     width: 100%;
     align-items: center;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     li {
       padding: 10px;
-      margin: 5px;
-      #utstallningar {
-        display: flex;
-        i {
-          margin-left: 5px;
-        }
-        #icon3 {
-          display: flex;
-        }
-        #icon4 {
-          display: none;
-        }
-      }
       a {
         color: $clr-white;
         text-decoration: none;
+        margin: 0;
+        padding: 0;
+      }
+      #utstallningar {
+        display: flex;
+        #icon3 {
+          display: flex;
+          margin-left: 5px;
+        }
+        #icon4 {
+          display: none;
+          margin-left: 5px;
+        }
+      }
+      .active {
+        text-decoration: underline;
       }
       .dropdown-content {
         display: none;
         flex-direction: column;
         align-items: center;
         a {
-          display: flex;
           font-size: 14px;
-          padding-bottom: 0;
-          padding-top: 30px;
+          padding-top: 20px;
         }
       }
-    }
-  }
-  input {
-    display: none;
-  }
-  .search-button {
-    color: $clr-white;
-    background-color: $clr-hf;
-    border: none;
-    cursor: pointer;
-    font-size: 17px;
-    display: none;
-  }
-  .fa-share-alt {
-    display: none;
-  }
-  .icon {
-    margin-left: auto;
-    margin-right: 5%;
-    .fa-times,
-    .fa-bars {
-      // color: $clr-white;
-      // background-color: $clr-hf;
-      font-size: 30px;
-    }
-    #icon1 {
-      display: flex;
-    }
-    #icon2 {
-      display: none;
     }
   }
 }
 .banner {
   width: 100%;
   position: relative;
-  top: 55px;
+  top: 50px;
   z-index: -10;
 }
 
@@ -137,7 +151,6 @@ header {
 
 main {
   // border: 1px solid black;
-
   color: $clr-hf;
   background-color: $clr-bg;
   width: 100%;
@@ -145,11 +158,11 @@ main {
   hr {
     // border: 0.5px solid $clr-gray;
     width: 70%;
-    margin: 2% 0;
+    margin: 0;
   }
 }
 #main-index {
-  margin-top: 52px;
+  margin-top: 46px;
   // border: 1px solid black;
   padding-bottom: 10.5%;
   display: flex;
@@ -464,15 +477,19 @@ footer {
     padding: 0.5% 4%;
   }
   header {
-    #art-logo {
+    .logo-box {
       width: 6%;
+      padding: 0;
       margin: 0;
+      #art-logo {
+        margin: auto;
+      }
     }
     h1 {
       font-size: 1.7em;
-      margin-left: 2%;
-      margin-top: 0;
-      margin-bottom: 0;
+      margin: 0 auto;
+      padding: 0;
+      width: auto;
     }
     ul {
       display: flex;
@@ -480,41 +497,43 @@ footer {
       justify-content: space-between;
       align-items: center;
       width: 40%;
-      padding: 0;
       margin: auto;
       list-style: none;
       position: relative;
       top: 0;
       background: none;
       li {
+        margin: 0;
+        padding: 0;
         display: flex;
         justify-content: center;
-        #utstallningar {
-          display: inline;
-          #icon3 {
-            display: none;
-          }
-          #icon4 {
-            display: none;
-          }
-        }
         a {
           text-decoration: none;
           font-size: 14px;
-          padding: 0;
           color: $clr-white;
         }
         a:hover {
           color: $clr-gold;
         }
-        .active {
-          text-decoration: underline;
+        #utstallningar {
+          display: flex;
+          cursor: pointer;
+          #icon3 {
+            display: flex;
+          }
+          #icon4 {
+            display: none;
+          }
+          a {
+            margin: 0;
+            padding: 0;
+          }
         }
         .dropdown-content {
           display: none;
           background: rgba(7, 7, 7, 0.5);
           position: absolute;
-          top: 60%;
+          top: 80%;
           padding: 1%;
           a {
             display: block;
@@ -522,31 +541,26 @@ footer {
           }
         }
       }
-      .dropdown:hover .dropdown-content {
-        display: flex;
-        z-index: 15;
-      }
     }
     input {
+      position: unset;
       display: block;
       width: 12%;
       height: 20px;
-      margin-left: auto;
-      margin-top: 0;
-      margin-bottom: 0;
-      font-family: $font-alt;
+      margin: 0 0 0 auto;
       border-radius: 20px;
-      border: none;
       font-size: 14px;
     }
     .search-button {
+      position: unset;
       display: block;
-      margin-right: 25px;
+      margin-left: 5px;
     }
     .fa-share-alt {
       display: block;
       font-size: 25px;
       cursor: pointer;
+      margin: auto 0 auto auto;
     }
     .icon {
       display: none;

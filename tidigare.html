@@ -15,21 +15,24 @@
   </head>
   <body>
     <header>
-      <img src="images/logo.jpg" alt="Art logo" id="art-logo" />
+      <a href="index.html" class="logo-box"
+        ><img src="images/logo.jpg" alt="Art logo" id="art-logo"
+      /></a>
       <h1>LIVE ART GALLERY</h1>
 
       <a class="icon" onclick="dropDown('nav', 'icon1', 'icon2')">
         <i class="fa fa-bars" id="icon1"></i>
-        <i class="fa fa-times" id="icon2"></i>
+        <span id="icon2">&#x2573;</span>
       </a>
+
       <ul id="nav">
         <li><a href="index.html">HEM</a></li>
         <li class="dropdown">
           <a
             id="utstallningar"
             onclick="dropDown('mobil-dropdown', 'icon3', 'icon4')"
-            >UTSTÄLLNINGAR<i class="fa fa-plus-square-o" id="icon3"></i
-            ><i class="fa fa-minus-square-o" id="icon4"></i
+            >UTSTÄLLNINGAR<i class="fa fa-angle-down" id="icon3"></i
+            ><i class="fa fa-angle-up" id="icon4"></i
           ></a>
           <div class="dropdown-content" id="mobil-dropdown">
             <a href="pagaende.html">PÅGÅENDE</a>
