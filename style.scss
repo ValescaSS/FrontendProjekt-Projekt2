@@ -18,6 +18,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 body {
   background-color: $clr-bg;
@@ -151,26 +152,31 @@ header {
 // main
 
 main {
-  // border: 1px solid black;
   color: $clr-hf;
   background-color: $clr-bg;
   width: 100%;
-  // height: 100%;
   hr {
-    // border: 0.5px solid $clr-gray;
     width: 70%;
     margin: 0;
+  }
+  .scroll-top {
+    margin-left: auto;
+    padding: 10px;
+    font-size: 3em;
+    color: $clr-hf;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
   }
 }
 #main-index {
   margin-top: 46px;
-  // border: 1px solid black;
   padding-bottom: 10.5%;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: 0 0 16px $clr-shd-i;
-  // height: 100%;
   div {
     a {
       img {
@@ -247,7 +253,6 @@ main {
   top: 15%;
   left: 5%;
   background-color: rgba(55, 55, 55, 0.9);
-  // z-index: 10;
   .button {
     display: flex;
     justify-content: flex-end;
@@ -348,6 +353,7 @@ main {
   align-items: center;
   section {
     width: 90%;
+    margin: 10px;
     img {
       width: 100%;
       box-shadow: 0px 8px 16px 0px $clr-shd;
@@ -362,7 +368,6 @@ main {
 }
 
 #main-kontakt {
-  // border: 1px solid black;
   margin-top: 80px;
   width: 90%;
   margin-left: auto;
@@ -376,7 +381,6 @@ main {
     "line"
     "adress"
     "karta"
-    // "linje"
     "formular";
   .rubrik {
     grid-area: rubrik;
@@ -579,6 +583,11 @@ footer {
 
   main {
     padding: 2.5% 0 5% 0;
+    .scroll-top {
+      position: relative;
+      top: 50px;
+      right: 20px;
+    }
   }
 
   #main-index {
@@ -605,15 +614,13 @@ footer {
   #main-pagaende {
     margin-top: 60px;
     .white-box {
-      margin: 20px;
+      margin: 30px;
       flex-direction: row;
       justify-content: space-evenly;
       align-items: center;
       width: 70%;
-      // height: 100%;
       img {
         width: 25%;
-        // height: 100%;
       }
       div {
         width: 40%;
@@ -627,6 +634,7 @@ footer {
   .overlay {
     width: 60%;
     height: 80%;
+    top: 12%;
     left: 20%;
   }
   .overlay-bild {
@@ -717,6 +725,7 @@ footer {
     margin-top: 60px;
     section {
       display: grid;
+      margin: 30px;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: 2%;
       width: 70%;
