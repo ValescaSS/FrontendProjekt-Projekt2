@@ -1,0 +1,150 @@
+commit ec20a2bb4536d77516eb874d0885feede06eec16
+Author: Valesca Sarrocchi <valescasarrocchi@hotmail.com>
+Date:   Thu Mar 14 10:17:22 2019 +0100
+
+    add redovisning krav
+
+commit f6bbb59434c3aa51968411d5c1ade40bf31e3f73
+Author: Valesca Sarrocchi <valescasarrocchi@hotmail.com>
+Date:   Thu Mar 14 10:05:19 2019 +0100
+
+    ta bort oanvanda Bilder
+
+commit c8e77df8e33fdb5ba055227334e8d789c3199b9e
+Author: Valesca Sarrocchi <valescasarrocchi@hotmail.com>
+Date:   Thu Mar 14 10:01:08 2019 +0100
+
+    ta bort oandvBilder
+
+commit 109837f3c654feadc9c38e70cc4068c9f03bb71b
+Author: Valesca Sarrocchi <valescasarrocchi@hotmail.com>
+Date:   Thu Mar 14 09:55:03 2019 +0100
+
+    add kommentarer
+
+commit 88d4edb413c8d4c6c19ca96a7d812354d71e7eab
+Merge: 63033cc 4310e23
+Author: Valesca Sarrocchi <valescasarrocchi@hotmail.com>
+Date:   Mon Mar 11 15:22:41 2019 +0100
+
+    add read me
+
+commit 63033cc340e0cade1417437b660f1dcd134b972d
+Author: Valesca Sarrocchi <valescasarrocchi@hotmail.com>
+Date:   Mon Mar 11 15:19:31 2019 +0100
+
+    add scroll up
+
+commit 4310e239fc139a1dd9560ccda0dfbc756eaf004f
+Author: Valesca Sarrocchi <43675670+ValescaSS@users.noreply.github.com>
+Date:   Mon Mar 11 13:28:18 2019 +0100
+
+    Update README.md
+
+commit 4395435343d0639c84323371c6b4d6f8313f3ec3
+Author: Valesca Sarrocchi <43675670+ValescaSS@users.noreply.github.com>
+Date:   Mon Mar 11 13:27:47 2019 +0100
+
+    Create README.md
+
+commit d46e10d8b4225cba1e15882e72c7cd0095412d43
+Author: Valesca Sarrocchi <valescasarrocchi@hotmail.com>
+Date:   Mon Mar 11 09:59:26 2019 +0100
+
+    ta bort mobil input
+
+commit d7e9db165b1fbaf20e46e0b4df9f7e4d1768c67b
+Author: Valesca Sarrocchi <valescasarrocchi@hotmail.com>
+Date:   Mon Mar 11 09:50:03 2019 +0100
+
+    mobil nav fix 5
+
+commit 6407e0a220a72e042caacceda41a902540f653f6
+Author: Valesca Sarrocchi <valescasarrocchi@hotmail.com>
+Date:   Sun Mar 10 12:27:02 2019 +0100
+
+    mobil nav fix 4
+
+commit d4defc8b8660a4b2051a8072a8075eb9d4821e6e
+Author: Valesca Sarrocchi <valescasarrocchi@hotmail.com>
+Date:   Fri Mar 8 11:11:34 2019 +0100
+
+    mobil overlay bild fix 1
+
+commit f6c3f4b0dbaf3fd563c6779e4127838f028a84f6
+Author: Valesca Sarrocchi <valescasarrocchi@hotmail.com>
+Date:   Fri Mar 8 10:10:33 2019 +0100
+
+    mobil nav fix 3
+
+commit de6d3bfa68b627be0279e0d9960aeab935da99df
+Author: Valesca Sarrocchi <valescasarrocchi@hotmail.com>
+Date:   Fri Mar 8 09:56:23 2019 +0100
+
+    mobil nav fix 2
+
+commit 87fd0837d1d6d109dd78193bf4154c1991d6f4db
+Author: Valesca Sarrocchi <valescasarrocchi@hotmail.com>
+Date:   Thu Mar 7 14:48:41 2019 +0100
+
+    nav fix
+
+commit d382731cd1132d1136724f69a07f9a29169736e5
+Author: Valesca Sarrocchi <valescasarrocchi@hotmail.com>
+Date:   Wed Mar 6 16:40:10 2019 +0100
+
+    add mobil layout
+
+commit 8b94d37557ab57fa24fd21ea7b6cc07abba59678
+Author: Valesca Sarrocchi <valescasarrocchi@hotmail.com>
+Date:   Tue Mar 5 07:44:09 2019 +0100
+
+    sokfunktion fixed
+
+commit c27bea34fb96efaec59f088acd68baa2a8aad65a
+Author: Valesca Sarrocchi <valescasarrocchi@hotmail.com>
+Date:   Mon Mar 4 18:51:19 2019 +0100
+
+    js fix
+
+commit 7eae021d50a5e23ffc8da8dfc6c11a529be0a552
+Author: Valesca Sarrocchi <valescasarrocchi@hotmail.com>
+Date:   Mon Mar 4 12:01:58 2019 +0100
+
+    add overlay och slideshow till pagaende sida
+
+commit 2ff0e4516f80d6657f1b7d3cc9401d79b85b911e
+Author: Valesca Sarrocchi <valescasarrocchi@hotmail.com>
+Date:   Sun Mar 3 10:47:37 2019 +0100
+
+    add kommande och tidigare
+
+commit d2ca4b10d108ea81724a0555ca359316ebb7bc89
+Author: Valesca Sarrocchi <valescasarrocchi@hotmail.com>
+Date:   Sat Mar 2 18:07:17 2019 +0100
+
+    add kontakt
+
+commit f1f314ab51a6f66c9c14a7d143a6cf3787427e02
+Author: Valesca Sarrocchi <valescasarrocchi@hotmail.com>
+Date:   Sat Mar 2 13:42:14 2019 +0100
+
+    fix sass
+
+commit c4d017f77541bf465176f09e4b061cbdc5335820
+Author: Valesca Sarrocchi <valescasarrocchi@hotmail.com>
+Date:   Sat Mar 2 13:40:30 2019 +0100
+
+    add utstallningar
+
+commit d30aacf37feb641857d37c7cd16d43bed50537e1
+Author: Valesca Sarrocchi <valescasarrocchi@hotmail.com>
+Date:   Sat Mar 2 10:20:28 2019 +0100
+
+    add index
+
+commit 0669bcc6132b454e850c56c058ba5d38035d9839
+Author: Valesca Sarrocchi <valescasarrocchi@hotmail.com>
+Date:   Fri Mar 1 09:49:57 2019 +0100
+
+    First commit
