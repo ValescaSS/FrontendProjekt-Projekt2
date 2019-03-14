@@ -1,24 +1,36 @@
-// slideshow 1 - pagaende sida
+// slideshow - overlay pagaende sida
 
-let slideIndex1 = 1;
-showSlides(slideIndex1, 'mySlides1');
-showSlides(slideIndex1, 'mySlides2');
-showSlides(slideIndex1, 'mySlides3');
+// öppnar slideshow direkt med första bilden när overlay öppnas
+let index = 1;
+showSlides(index, "mySlides1");
+showSlides(index, "mySlides2");
+showSlides(index, "mySlides3");
 
+// funktion plusSlides kontrollerar knappar tidigare och nästa (< och > i overlay)
 function plusSlides(n, x) {
-  showSlides(slideIndex1 += n, x);
+  showSlides((index += n), x);
 }
 
+// funktion showSlides
 function showSlides(n, x) {
-  let slides1 = document.getElementsByClassName(x);
-  if (n > slides1.length) {
-    slideIndex1 = 1;
+  // Array som sparar alla element med samma klass i overlay.
+  let slides = document.getElementsByClassName(x);
+
+  // Om sant då blir index lika med 1 och slideshow börjar om (visar första bilden i arrayen).
+  if (n > slides.length) {
+    index = 1;
   }
+
+  // Om sant då blir index lika med slides längd och då visas sista bilden i arrayen.
   if (n < 1) {
-    slideIndex1 = slides1.length;
+    index = slides.length;
   }
-  for (let i = 0; i < slides1.length; i++) {
-    slides1[i].style.display = "none";
+
+  // For loop som gör att alla bilder i slides arrayen inte visas.
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
-  slides1[slideIndex1 - 1].style.display = "flex";
+
+  // Sats som visar bilderna i arrayen slides enligt index.
+  slides[index - 1].style.display = "flex";
 }

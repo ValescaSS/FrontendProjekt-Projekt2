@@ -14,22 +14,28 @@
     <title>Pågående</title>
   </head>
   <body>
+    <!-- header -->
+
     <header>
       <a href="index.html" class="logo-box"
-        ><img src="images/logo.jpg" alt="Art logo" id="art-logo"
+        ><img src="images/logo.jpg" alt="Art logo" class="art-logo"
       /></a>
       <h1>LIVE ART GALLERY</h1>
+
+      <!-- hamburgare meny iconer -->
 
       <a class="icon" onclick="dropDown('nav', 'icon1', 'icon2')">
         <i class="fa fa-bars" id="icon1"></i>
         <span id="icon2">&#x2573;</span>
       </a>
 
+      <!-- mobil och desktop navigering -->
+
       <ul id="nav">
         <li><a href="index.html">HEM</a></li>
         <li class="dropdown">
           <a
-            id="utstallningar"
+            class="utstallningar"
             onclick="dropDown('mobil-dropdown', 'icon3', 'icon4')"
             >UTSTÄLLNINGAR<i class="fa fa-angle-down" id="icon3"></i
             ><i class="fa fa-angle-up" id="icon4"></i
@@ -43,16 +49,22 @@
         <li><a href="kontakt.html">KONTAKT</a></li>
       </ul>
 
+      <!-- sök input, sök icon och share icon -->
+
       <input type="text" placeholder="  Sök" />
       <button class="search-button"><i class="fa fa-search"></i></button>
-      <i class="fa fa-share-alt"></i>
+      <i class="fa fa-share-alt" title="Share"></i>
     </header>
+
+    <!-- main -->
 
     <main id="main-pagaende" class="main">
       <span id="pawelczerwinski"></span>
 
       <h2>PÅGÅENDE UTSTÄLLNINGAR</h2>
       <hr />
+
+      <!-- pågående utställningar bilder och beskrivning -->
 
       <div class="white-box">
         <img
@@ -77,10 +89,6 @@
             architecto.
           </p>
         </div>
-      </div>
-
-      <div>
-        <span id="hudsonhintze"></span>
       </div>
 
       <div class="white-box">
@@ -109,10 +117,6 @@
         </div>
       </div>
 
-      <div>
-        <span id="fabianbachli"></span>
-      </div>
-
       <div class="white-box">
         <img
           src="images/fabian-bachli-1313181-unsplash.jpg"
@@ -138,12 +142,15 @@
           </p>
         </div>
       </div>
+
+      <!-- scroll up -->
+
       <a href="#" class="scroll-top">
         <i class="fa fa-chevron-circle-up"></i>
       </a>
     </main>
 
-    <!-- overlay och slideshow -->
+    <!-- overlay 1 och slideshow 1 -->
 
     <div class="overlay" id="overlay1">
       <div class="overlay-bild mySlides1">
@@ -181,7 +188,7 @@
       </div>
     </div>
 
-    <!--  -->
+    <!-- overlay 2 och slideshow 2 -->
 
     <div class="overlay" id="overlay2">
       <div class="overlay-bild mySlides2">
@@ -219,7 +226,7 @@
       </div>
     </div>
 
-    <!--  -->
+    <!-- overlay 3 och slideshow 3 -->
 
     <div class="overlay" id="overlay3">
       <div class="overlay-bild mySlides3">
@@ -253,7 +260,7 @@
       </div>
     </div>
 
-    <!--  -->
+    <!-- footer -->
 
     <footer>
       <p>Copyright 2019 - Valesca Sarrocchi</p>

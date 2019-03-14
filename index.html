@@ -14,22 +14,29 @@
     <title>Hem</title>
   </head>
   <body>
+
+    <!-- header -->
+
     <header>
       <a href="index.html" class="logo-box"
-        ><img src="images/logo.jpg" alt="Art logo" id="art-logo"
+        ><img src="images/logo.jpg" alt="Art logo" class="art-logo"
       /></a>
       <h1>LIVE ART GALLERY</h1>
+
+      <!-- hamburgare meny iconer -->
 
       <a class="icon" onclick="dropDown('nav', 'icon1', 'icon2')">
         <i class="fa fa-bars" id="icon1"></i>
         <span id="icon2">&#x2573;</span>
       </a>
 
+      <!-- mobil och desktop navigering -->
+
       <ul id="nav">
         <li><a href="index.html" class="active">HEM</a></li>
         <li>
           <a
-            id="utstallningar"
+            class="utstallningar"
             onclick="dropDown('mobil-dropdown', 'icon3', 'icon4')"
             >UTSTÄLLNINGAR<i class="fa fa-angle-down" id="icon3"></i
             ><i class="fa fa-angle-up" id="icon4"></i
@@ -42,10 +49,15 @@
         </li>
         <li><a href="kontakt.html">KONTAKT</a></li>
       </ul>
+
+      <!-- sök input, sök icon och share icon -->
+
       <input type="text" placeholder="  Sök" />
       <button class="search-button"><i class="fa fa-search"></i></button>
       <i class="fa fa-share-alt" title="Share"></i>
     </header>
+
+    <!-- hem banner -->
 
     <img
       src="images/deanna-j-565002-unsplash.jpg"
@@ -53,8 +65,12 @@
       class="banner"
     />
 
+    <!-- main -->
+
     <main id="main-index" class="main">
       <h2>PÅGÅENDE UTSTÄLLNINGAR</h2>
+
+      <!-- automatisk slideshow -->
 
       <div class="mySlides fade">
         <a href="pagaende.html#pawelczerwinski"
@@ -91,6 +107,8 @@
         <p>Från 1 maj till 25 juli 2019</p>
       </div>
     </main>
+
+    <!-- footer -->
 
     <footer>
       <p>Copyright 2019 - Valesca Sarrocchi</p>

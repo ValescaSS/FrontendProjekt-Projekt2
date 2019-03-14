@@ -48,7 +48,7 @@ header {
     flex-direction: column;
     margin: 1%;
     padding: 1%;
-    #art-logo {
+    .art-logo {
       width: 100%;
     }
   }
@@ -116,7 +116,7 @@ header {
         margin: 0;
         padding: 0;
       }
-      #utstallningar {
+      .utstallningar {
         display: flex;
         #icon3 {
           display: flex;
@@ -170,12 +170,22 @@ main {
     }
   }
 }
-#main-index {
-  margin-top: 46px;
-  padding-bottom: 10.5%;
+
+#main-index,
+#main-pagaende,
+#main-kommande,
+#main-tidigare {
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+// mobil layout hemsida
+
+#main-index {
+  margin-top: 46px;
+  padding-bottom: 10.5%;
   box-shadow: 0 0 16px $clr-shd-i;
   div {
     a {
@@ -207,11 +217,9 @@ main {
   }
 }
 
+// mobil layout pågående utstallningar sida
+
 #main-pagaende {
-  margin-top: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   .white-box {
     display: flex;
     flex-direction: column;
@@ -318,11 +326,9 @@ main {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+// mobil layout kommande utstallningar sida
+
 #main-kommande {
-  margin-top: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   div {
     display: flex;
     flex-direction: column;
@@ -346,11 +352,9 @@ main {
   }
 }
 
+// mobil layout tidigare utstallningar sida
+
 #main-tidigare {
-  margin-top: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   section {
     width: 90%;
     margin: 10px;
@@ -366,6 +370,8 @@ main {
     }
   }
 }
+
+// mobil layout kontaktsida
 
 #main-kontakt {
   margin-top: 80px;
@@ -419,6 +425,9 @@ main {
       border: 1px solid $clr-gray;
     }
   }
+
+  // mobil layout kontaktsida formulär
+
   .formular {
     grid-area: formular;
     display: flex;
@@ -460,6 +469,8 @@ main {
   }
 }
 
+// footer mobil layout
+
 footer {
   height: 110px;
   padding: 5px;
@@ -467,6 +478,7 @@ footer {
   .social-media {
     margin-bottom: 15px;
     i {
+      cursor: pointer;
       font-size: 35px;
     }
   }
@@ -475,18 +487,20 @@ footer {
 // desktop layout
 
 @media (min-width: 768px) {
-  // header
 
   header,
   footer {
     padding: 0.5% 4%;
   }
+
+  // header för alla desktop sidor
+
   header {
     .logo-box {
       width: 6%;
       padding: 0;
       margin: 0;
-      #art-logo {
+      .art-logo {
         margin: auto;
       }
     }
@@ -496,6 +510,9 @@ footer {
       padding: 0;
       width: auto;
     }
+
+    // desktop navigering
+
     ul {
       display: flex;
       flex-direction: row;
@@ -520,7 +537,10 @@ footer {
         a:hover {
           color: $clr-gold;
         }
-        #utstallningar {
+
+        // dropdown navigering (desktop)
+
+        .utstallningar {
           display: flex;
           cursor: pointer;
           #icon3 {
@@ -547,6 +567,9 @@ footer {
         }
       }
     }
+
+    // input, sök icon och share icon (desktop)
+
     input {
       position: unset;
       display: block;
@@ -567,19 +590,22 @@ footer {
       cursor: pointer;
       margin: auto 0 auto auto;
     }
+
+    // hamburgare meny mobil layout
+
     .icon {
       display: none;
     }
   }
 
-  // banner
+  // banner i hemsida (desktop)
 
   .banner {
     position: sticky;
     top: 40px;
   }
 
-  // main
+  // main för alla sidor (desktop)
 
   main {
     padding: 2.5% 0 5% 0;
@@ -590,8 +616,17 @@ footer {
     }
   }
 
-  #main-index {
+  #main-index,
+  #main-pagaende,
+  #main-kommande,
+  #main-tidigare,
+  #main-kontakt {
     margin-top: 60px;
+  }
+
+  // hemsida (desktop)
+
+  #main-index {
     box-shadow: 0px -2px 16px 0px $clr-shd;
     margin-top: 0;
     padding-bottom: 5%;
@@ -611,8 +646,9 @@ footer {
     }
   }
 
+  // pågående utstallningar sida (desktop)
+
   #main-pagaende {
-    margin-top: 60px;
     .white-box {
       margin: 30px;
       flex-direction: row;
@@ -629,7 +665,7 @@ footer {
     }
   }
 
-  // overlay och slideshow pagaende sida
+  // overlay och slideshow pagaende sida (desktop)
 
   .overlay {
     width: 60%;
@@ -661,8 +697,9 @@ footer {
     }
   }
 
+  // kommande utstallningar sida (desktop)
+
   #main-kommande {
-    margin-top: 60px;
     div {
       width: 50%;
       margin: 30px;
@@ -679,8 +716,9 @@ footer {
     }
   }
 
+  // kontakt sida (desktop)
+
   #main-kontakt {
-    margin-top: 60px;
     width: 70%;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -700,6 +738,9 @@ footer {
         width: 90%;
       }
     }
+
+    // desktoplayout formulär i kontaktsida
+
     .formular {
       margin: 0;
       align-items: flex-end;
@@ -721,8 +762,9 @@ footer {
     }
   }
 
+  // tidigare utstallningar sida (desktop)
+
   #main-tidigare {
-    margin-top: 60px;
     section {
       display: grid;
       margin: 30px;
@@ -739,7 +781,7 @@ footer {
     }
   }
 
-  // footer
+  // footer desktop
 
   footer {
     height: 80px;

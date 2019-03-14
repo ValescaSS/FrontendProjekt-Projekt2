@@ -53,7 +53,7 @@ header .logo-box {
   padding: 1%;
 }
 
-header .logo-box #art-logo {
+header .logo-box .art-logo {
   width: 100%;
 }
 
@@ -140,20 +140,20 @@ header ul li a {
   padding: 0;
 }
 
-header ul li #utstallningar {
+header ul li .utstallningar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-header ul li #utstallningar #icon3 {
+header ul li .utstallningar #icon3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-left: 5px;
 }
 
-header ul li #utstallningar #icon4 {
+header ul li .utstallningar #icon4 {
   display: none;
   margin-left: 5px;
 }
@@ -208,9 +208,11 @@ main .scroll-top:hover {
   opacity: 0.5;
 }
 
-#main-index {
-  margin-top: 46px;
-  padding-bottom: 10.5%;
+#main-index,
+#main-pagaende,
+#main-kommande,
+#main-tidigare {
+  margin-top: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -221,6 +223,11 @@ main .scroll-top:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#main-index {
+  margin-top: 46px;
+  padding-bottom: 10.5%;
   -webkit-box-shadow: 0 0 16px #928d8d;
           box-shadow: 0 0 16px #928d8d;
 }
@@ -260,20 +267,6 @@ main .scroll-top:hover {
   to {
     opacity: 1;
   }
-}
-
-#main-pagaende {
-  margin-top: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 #main-pagaende .white-box {
@@ -409,20 +402,6 @@ main .scroll-top:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-#main-kommande {
-  margin-top: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 #main-kommande div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -454,20 +433,6 @@ main .scroll-top:hover {
 
 #main-kommande div p {
   margin: 0 0 30px 0;
-}
-
-#main-tidigare {
-  margin-top: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 #main-tidigare section {
@@ -630,6 +595,7 @@ footer .social-media {
 }
 
 footer .social-media i {
+  cursor: pointer;
   font-size: 35px;
 }
 
@@ -643,7 +609,7 @@ footer .social-media i {
     padding: 0;
     margin: 0;
   }
-  header .logo-box #art-logo {
+  header .logo-box .art-logo {
     margin: auto;
   }
   header h1 {
@@ -691,21 +657,21 @@ footer .social-media i {
   header ul li a:hover {
     color: #c0b283;
   }
-  header ul li #utstallningar {
+  header ul li .utstallningar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     cursor: pointer;
   }
-  header ul li #utstallningar #icon3 {
+  header ul li .utstallningar #icon3 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  header ul li #utstallningar #icon4 {
+  header ul li .utstallningar #icon4 {
     display: none;
   }
-  header ul li #utstallningar a {
+  header ul li .utstallningar a {
     margin: 0;
     padding: 0;
   }
@@ -756,8 +722,14 @@ footer .social-media i {
     top: 50px;
     right: 20px;
   }
-  #main-index {
+  #main-index,
+  #main-pagaende,
+  #main-kommande,
+  #main-tidigare,
+  #main-kontakt {
     margin-top: 60px;
+  }
+  #main-index {
     -webkit-box-shadow: 0px -2px 16px 0px #707070;
             box-shadow: 0px -2px 16px 0px #707070;
     margin-top: 0;
@@ -775,9 +747,6 @@ footer .social-media i {
   #main-index div .artist-namn {
     font-size: 20px;
     margin-top: 10px;
-  }
-  #main-pagaende {
-    margin-top: 60px;
   }
   #main-pagaende .white-box {
     margin: 30px;
@@ -827,9 +796,6 @@ footer .social-media i {
   .overlay-bild #ingennamn {
     width: 70%;
   }
-  #main-kommande {
-    margin-top: 60px;
-  }
   #main-kommande div {
     width: 50%;
     margin: 30px;
@@ -845,7 +811,6 @@ footer .social-media i {
     margin: 0;
   }
   #main-kontakt {
-    margin-top: 60px;
     width: 70%;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
@@ -881,9 +846,6 @@ footer .social-media i {
   #main-kontakt .formular a {
     width: 15%;
     margin: 0;
-  }
-  #main-tidigare {
-    margin-top: 60px;
   }
   #main-tidigare section {
     display: -ms-grid;

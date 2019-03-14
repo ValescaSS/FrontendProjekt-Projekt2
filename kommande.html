@@ -14,22 +14,29 @@
     <title>Kommande</title>
   </head>
   <body>
+
+    <!-- header -->
+
     <header>
       <a href="index.html" class="logo-box"
-        ><img src="images/logo.jpg" alt="Art logo" id="art-logo"
+        ><img src="images/logo.jpg" alt="Art logo" class="art-logo"
       /></a>
       <h1>LIVE ART GALLERY</h1>
+
+      <!-- hamburgare meny iconer -->
 
       <a class="icon" onclick="dropDown('nav', 'icon1', 'icon2')">
         <i class="fa fa-bars" id="icon1"></i>
         <span id="icon2">&#x2573;</span>
       </a>
 
+      <!-- mobil och desktop navigering -->
+
       <ul id="nav">
         <li><a href="index.html">HEM</a></li>
         <li class="dropdown">
           <a
-            id="utstallningar"
+            class="utstallningar"
             onclick="dropDown('mobil-dropdown', 'icon3', 'icon4')"
             >UTSTÄLLNINGAR<i class="fa fa-angle-down" id="icon3"></i
             ><i class="fa fa-angle-up" id="icon4"></i
@@ -43,15 +50,21 @@
         <li><a href="kontakt.html">KONTAKT</a></li>
       </ul>
 
+      <!-- sök input, sök icon och share icon -->
+
       <input type="text" placeholder="  Sök" />
       <button class="search-button"><i class="fa fa-search"></i></button>
-      <i class="fa fa-share-alt"></i>
+      <i class="fa fa-share-alt" title="Share"></i>
     </header>
+
+    <!-- main -->
 
     <main id="main-kommande" class="main">
       <h2 class="rubrik">KOMANDE UTSTÄLLNINGAR</h2>
 
       <hr class="line" />
+
+      <!-- kommande utställningar -->
 
       <div>
         <img
@@ -81,6 +94,8 @@
         <p>Juni - Augusti</p>
       </div>
     </main>
+
+    <!-- footer -->
 
     <footer>
       <p>Copyright 2019 - Valesca Sarrocchi</p>
